@@ -1,0 +1,46 @@
+---
+OVIS:
+  id: OVIS-DOC-SYS-0002
+  title: OVIS ID Registry
+  type: SCHEMA
+  status: DRAFT
+  version: v0.1
+  domain: SYS
+  repo: ovis-blueprint
+  created: 2026-03-12
+  last_updated: 2026-03-12
+  author: codex
+  contributors: []
+  tags:
+    - phase-0
+    - scaffold
+    - registry
+---
+OVIS_ID_REGISTRY:
+  version: v0.1
+  description: Global ID allocation registry for OVIS artifacts
+  last_updated: 2026-03-12
+
+  DOC:
+    SYS: 1
+    GOV: 1
+    WF: 1
+    IA: 1
+    TEMP: 1
+    VAL: 1
+
+  TASK:
+    SYS: 1
+    GOV: 1
+    WF: 1
+    IA: 1
+    TEMP: 1
+    VAL: 1
+
+  CHANGE:
+    SYS: 1
+    GOV: 1
+    WF: 1
+    IA: 1
+    TEMP: 1
+    VAL: 1
