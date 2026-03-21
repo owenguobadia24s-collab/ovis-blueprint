@@ -1,0 +1,55 @@
+id: REGISTRY-MODULE-0015
+title: Metadata Registry
+type: REGISTRY
+status: emerging
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-META-REGISTRY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0015.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-META-REGISTRY-0001
+slug: meta_registry
+parent_system_id: SYS-METADATA-0001
+parent_system_slug: metadata_system
+description: Registry semantics for files, systems, modules, repos, and relations.
+responsibilities:
+  - registry storage model
+  - structural record ownership
+  - relation recording
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - REGISTRIES/allocators.yaml
+  - REGISTRIES/entries/**
+  - REGISTRIES/systems/**
+  - REGISTRIES/modules/**
+  - REGISTRIES/repos/**
+  - REGISTRIES/relations/**
+related_adrs:
+  - ADR-ARC-0008
+  - ADR-ARC-0010
+  - ADR-ARC-0011
+  - ADR-ARC-0012
+related_cjs:
+  - CJ-STRUCTURE-0001
+  - CJ-STRUCTURE-0002
+  - CJ-STRUCTURE-0003
+  - CJ-STRUCTURE-0005
+depends_on_modules:
+  - MOD-META-SCHEMA-POLICY-0001
+basis:
+  - approved_direction
+  - proposed

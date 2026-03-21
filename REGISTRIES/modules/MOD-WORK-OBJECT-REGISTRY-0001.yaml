@@ -1,0 +1,43 @@
+id: REGISTRY-MODULE-0002
+title: Work Object Registry
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-WORK-OBJECT-REGISTRY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0002.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-WORK-OBJECT-REGISTRY-0001
+slug: work_object_registry
+parent_system_id: SYS-KERNEL-0001
+parent_system_slug: ovis_kernel
+description: Canonical state models, lineage, and work-object identity ownership.
+responsibilities:
+  - state model ownership
+  - schema export
+  - canonical object typing
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - src/ovis_state_models/**
+related_adrs:
+  - ADR-ARC-0001
+  - ADR-ARC-0007
+related_cjs: []
+depends_on_modules: []
+basis:
+  - evidenced
+  - doctrine_approved

@@ -1,0 +1,45 @@
+id: REGISTRY-MODULE-0016
+title: Metadata Reconcile
+type: REGISTRY
+status: emerging
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-META-RECONCILE-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0016.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-META-RECONCILE-0001
+slug: meta_reconcile
+parent_system_id: SYS-METADATA-0001
+parent_system_slug: metadata_system
+description: Fail-closed registry synchronization logic.
+responsibilities:
+  - deterministic comparison
+  - conflict detection
+  - controlled mutation rules
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - src/ovis_metadata/reconciler.py
+related_adrs:
+  - ADR-ARC-0008
+  - ADR-ARC-0010
+related_cjs: []
+depends_on_modules:
+  - MOD-META-REGISTRY-0001
+  - MOD-META-SCHEMA-POLICY-0001
+basis:
+  - approved_direction
+  - proposed

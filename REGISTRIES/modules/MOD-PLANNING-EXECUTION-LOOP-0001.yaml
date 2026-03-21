@@ -1,0 +1,49 @@
+id: REGISTRY-MODULE-0006
+title: Planning Execution Loop
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-PLANNING-EXECUTION-LOOP-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0006.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+slug: planning_execution_loop
+parent_system_id: SYS-KERNEL-0001
+parent_system_slug: ovis_kernel
+description: Recursive branch-cycle orchestration across planning, review, execution, and continuity.
+responsibilities:
+  - loop orchestration
+  - execution sequencing
+  - approval and continuity composition
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - src/ovis_loop/**
+related_adrs:
+  - ADR-ARC-0005
+  - ADR-ARC-0006
+related_cjs: []
+depends_on_modules:
+  - MOD-WORK-OBJECT-REGISTRY-0001
+  - MOD-BRANCH-CONTINUITY-0001
+  - MOD-BRANCH-COMPACTION-0001
+  - MOD-EVENT-LOG-0001
+  - MOD-RUNTIME-GATEWAY-0001
+  - MOD-TOOL-GATEWAY-0001
+basis:
+  - evidenced
+  - doctrine_approved

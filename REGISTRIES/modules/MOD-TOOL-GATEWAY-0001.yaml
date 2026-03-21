@@ -1,0 +1,43 @@
+id: REGISTRY-MODULE-0009
+title: Tool Gateway
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-TOOL-GATEWAY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0009.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-TOOL-GATEWAY-0001
+slug: tool_gateway
+parent_system_id: SYS-INTEGRATION-0001
+parent_system_slug: integration_bridge
+description: Governed capability execution and registry-based tool mediation.
+responsibilities:
+  - capability registry
+  - policy hooks
+  - executor envelopes
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - src/ovis_tool_gateway/**
+related_adrs:
+  - ADR-ARC-0002
+related_cjs: []
+depends_on_modules:
+  - MOD-REVIEW-GATE-0001
+basis:
+  - evidenced
+  - doctrine_approved

@@ -1,0 +1,42 @@
+id: REGISTRY-MODULE-0001
+title: Runtime Gateway
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-RUNTIME-GATEWAY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0001.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-RUNTIME-GATEWAY-0001
+slug: runtime_gateway
+parent_system_id: SYS-KERNEL-0001
+parent_system_slug: ovis_kernel
+description: Runtime mediation across local, cloud, and OpenAI substrates.
+responsibilities:
+  - runtime adapter ownership
+  - provider hook boundaries
+  - execution mediation
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - src/ovis_responses_runtime/**
+related_adrs:
+  - ADR-ARC-0003
+related_cjs: []
+depends_on_modules: []
+basis:
+  - evidenced
+  - doctrine_approved

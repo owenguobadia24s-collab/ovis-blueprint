@@ -1,0 +1,60 @@
+id: REGISTRY-RELATION-0004
+title: Repo Participation Relations
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: relation
+repo: ovis-blueprint
+path: REGISTRIES/relations/repo_participation.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0004.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+related_module_ids:
+  - MOD-META-SCHEMA-POLICY-0001
+record_kind: relation_registry
+relation_name: system_spans_repo
+authority_class: secondary
+records:
+  - system_id: SYS-KERNEL-0001
+    repo_id: REPO-BLUEPRINT-0001
+    repo_role: design_authority
+  - system_id: SYS-KERNEL-0001
+    repo_id: REPO-RUNTIME-0001
+    repo_role: implementation_authority
+  - system_id: SYS-KERNEL-0001
+    repo_id: REPO-KNOWLEDGE-0001
+    repo_role: derived_observer
+  - system_id: SYS-METADATA-0001
+    repo_id: REPO-BLUEPRINT-0001
+    repo_role: canonical_governance
+  - system_id: SYS-METADATA-0001
+    repo_id: REPO-RUNTIME-0001
+    repo_role: tooling_execution
+  - system_id: SYS-METADATA-0001
+    repo_id: REPO-KNOWLEDGE-0001
+    repo_role: governed_consumer
+  - system_id: SYS-INTEGRATION-0001
+    repo_id: REPO-BLUEPRINT-0001
+    repo_role: policy_authority
+  - system_id: SYS-INTEGRATION-0001
+    repo_id: REPO-RUNTIME-0001
+    repo_role: execution_surface
+  - system_id: SYS-INTEGRATION-0001
+    repo_id: REPO-KNOWLEDGE-0001
+    repo_role: evidence_consumer
+  - system_id: SYS-RETRIEVAL-MEMORY-0001
+    repo_id: REPO-BLUEPRINT-0001
+    repo_role: design_authority
+  - system_id: SYS-RETRIEVAL-MEMORY-0001
+    repo_id: REPO-RUNTIME-0001
+    repo_role: future_implementation
+  - system_id: SYS-RETRIEVAL-MEMORY-0001
+    repo_id: REPO-KNOWLEDGE-0001
+    repo_role: derived_memory_surface

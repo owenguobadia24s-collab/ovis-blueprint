@@ -1,0 +1,43 @@
+id: REGISTRY-MODULE-0011
+title: Retrieval Layer
+type: REGISTRY
+status: planned
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-RETRIEVAL-LAYER-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0011.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-RETRIEVAL-LAYER-0001
+slug: retrieval_layer
+parent_system_id: SYS-RETRIEVAL-MEMORY-0001
+parent_system_slug: retrieval_memory
+description: Evidence fetch and context rehydration.
+responsibilities:
+  - retrieval interfaces
+  - evidence lookup
+  - context assembly
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+  - ovis-knowledge
+owned_path_patterns:
+  - future://retrieval_layer/**
+related_adrs: []
+related_cjs: []
+depends_on_modules:
+  - MOD-WORK-OBJECT-REGISTRY-0001
+basis:
+  - doctrine_approved
+  - proposed

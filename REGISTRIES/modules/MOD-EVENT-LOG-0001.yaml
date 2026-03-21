@@ -1,0 +1,46 @@
+id: REGISTRY-MODULE-0005
+title: Event Log
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-EVENT-LOG-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0005.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-EVENT-LOG-0001
+slug: event_log
+parent_system_id: SYS-KERNEL-0001
+parent_system_slug: ovis_kernel
+description: Append-only audit and event persistence.
+responsibilities:
+  - event envelopes
+  - event hashing
+  - append-only persistence
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+  - ovis-knowledge
+owned_path_patterns:
+  - src/ovis_event_log/**
+related_adrs:
+  - ADR-ARC-0001
+  - ADR-ARC-0006
+  - ADR-ARC-0007
+related_cjs: []
+depends_on_modules:
+  - MOD-WORK-OBJECT-REGISTRY-0001
+basis:
+  - evidenced
+  - doctrine_approved

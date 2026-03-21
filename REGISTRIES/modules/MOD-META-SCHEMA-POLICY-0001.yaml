@@ -1,0 +1,48 @@
+id: REGISTRY-MODULE-0014
+title: Metadata Schema Policy
+type: REGISTRY
+status: emerging
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-META-SCHEMA-POLICY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0014.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: module
+subject_module_id: MOD-META-SCHEMA-POLICY-0001
+slug: meta_schema_policy
+parent_system_id: SYS-METADATA-0001
+parent_system_slug: metadata_system
+description: Metadata vocabulary, validation schema, and structural rules.
+responsibilities:
+  - field definitions
+  - validation constraints
+  - lifecycle vocabulary
+supersedes: []
+superseded_by: []
+participating_repos:
+  - ovis-blueprint
+  - ovis-runtime
+owned_path_patterns:
+  - POLICIES/OVIS_METADATA_STANDARD.md
+  - validators/OVIS_METADATA_SCHEMA.yaml
+  - ADR/ADR-008_*
+  - ADR/ADR-009_*
+related_adrs:
+  - ADR-ARC-0008
+  - ADR-ARC-0009
+related_cjs:
+  - CJ-STRUCTURE-0004
+depends_on_modules:
+  - MOD-META-HEADER-0001
+basis:
+  - approved_direction
+  - proposed

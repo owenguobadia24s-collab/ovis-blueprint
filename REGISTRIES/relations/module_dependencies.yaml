@@ -1,0 +1,45 @@
+id: REGISTRY-RELATION-0001
+title: Module Dependency Relations
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: relation
+repo: ovis-blueprint
+path: REGISTRIES/relations/module_dependencies.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0001.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+related_module_ids:
+  - MOD-META-SCHEMA-POLICY-0001
+record_kind: relation_registry
+relation_name: module_depends_on_module
+authority_class: secondary
+records:
+  - source_module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    target_module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    dependency_kind: reads_canonical_state_models
+  - source_module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    target_module_id: MOD-EVENT-LOG-0001
+    dependency_kind: records_audit_events
+  - source_module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    target_module_id: MOD-BRANCH-CONTINUITY-0001
+    dependency_kind: updates_branch_state
+  - source_module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    target_module_id: MOD-BRANCH-COMPACTION-0001
+    dependency_kind: invokes_optional_compaction
+  - source_module_id: MOD-TOOL-GATEWAY-0001
+    target_module_id: MOD-REVIEW-GATE-0001
+    dependency_kind: honors_policy_and_risk_controls
+  - source_module_id: MOD-META-RECONCILE-0001
+    target_module_id: MOD-META-REGISTRY-0001
+    dependency_kind: mutates_registry_records
+  - source_module_id: MOD-META-SCAFFOLD-0001
+    target_module_id: MOD-META-HEADER-0001
+    dependency_kind: emits_supported_metadata_forms

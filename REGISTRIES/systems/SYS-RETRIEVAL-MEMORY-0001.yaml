@@ -1,0 +1,49 @@
+id: REGISTRY-SYSTEM-0004
+title: OVIS Retrieval and Memory System
+type: REGISTRY
+status: planned
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: system
+repo: ovis-blueprint
+path: REGISTRIES/systems/SYS-RETRIEVAL-MEMORY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0004.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: system
+subject_system_id: SYS-RETRIEVAL-MEMORY-0001
+slug: retrieval_memory
+description: Retrieval, evidence recall, and memory continuity surfaces that feed planning, review, and research.
+supersedes: []
+superseded_by: []
+authority_model:
+  canonical_repo: ovis-blueprint
+  operational_repo: ovis-runtime
+participating_repos:
+  - repo_id: REPO-BLUEPRINT-0001
+    repo_name: ovis-blueprint
+    role: design_authority
+    authority_scope: canonical_structure_and_policy
+  - repo_id: REPO-RUNTIME-0001
+    repo_name: ovis-runtime
+    role: implementation_authority
+    authority_scope: operational_runtime_and_tooling
+  - repo_id: REPO-KNOWLEDGE-0001
+    repo_name: ovis-knowledge
+    role: derived_knowledge_authority
+    authority_scope: derived_overlays_and_memory_surfaces
+related_modules:
+  - MOD-RETRIEVAL-LAYER-0001
+  - MOD-SYSTEM-MEMORY-0001
+depends_on_systems:
+  - SYS-KERNEL-0001
+direction_notes: This system remains intentionally unsplit until implementation proves separate retrieval and memory boundaries.
+basis:
+  - doctrine_approved
+  - proposed

@@ -1,0 +1,49 @@
+id: REGISTRY-SYSTEM-0003
+title: OVIS Integration and Bridge System
+type: REGISTRY
+status: emerging
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: system
+repo: ovis-blueprint
+path: REGISTRIES/systems/SYS-INTEGRATION-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0003.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: system
+subject_system_id: SYS-INTEGRATION-0001
+slug: integration_bridge
+description: Governed tool invocation, bridge dispatch, and external integration surfaces subordinate to OVIS policy.
+supersedes: []
+superseded_by: []
+authority_model:
+  canonical_repo: ovis-blueprint
+  operational_repo: ovis-runtime
+participating_repos:
+  - repo_id: REPO-BLUEPRINT-0001
+    repo_name: ovis-blueprint
+    role: design_authority
+    authority_scope: canonical_structure_and_policy
+  - repo_id: REPO-RUNTIME-0001
+    repo_name: ovis-runtime
+    role: implementation_authority
+    authority_scope: operational_runtime_and_tooling
+  - repo_id: REPO-KNOWLEDGE-0001
+    repo_name: ovis-knowledge
+    role: derived_knowledge_authority
+    authority_scope: derived_overlays_and_memory_surfaces
+related_modules:
+  - MOD-TOOL-GATEWAY-0001
+  - MOD-BRIDGE-DISPATCH-0001
+depends_on_systems:
+  - SYS-KERNEL-0001
+direction_notes: This system isolates external mediation from the kernel while preserving OVIS policy control.
+basis:
+  - doctrine_approved
+  - evidenced

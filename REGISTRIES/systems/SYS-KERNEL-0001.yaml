@@ -1,0 +1,54 @@
+id: REGISTRY-SYSTEM-0001
+title: OVIS Cognitive Infrastructure Kernel
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: system
+repo: ovis-blueprint
+path: REGISTRIES/systems/SYS-KERNEL-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0001.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+record_kind: system
+subject_system_id: SYS-KERNEL-0001
+slug: ovis_kernel
+description: Governed kernel for runtime mediation, work objects, branch continuity, compaction, orchestration, approval flow, and audit continuity.
+supersedes: []
+superseded_by: []
+authority_model:
+  canonical_repo: ovis-blueprint
+  operational_repo: ovis-runtime
+participating_repos:
+  - repo_id: REPO-BLUEPRINT-0001
+    repo_name: ovis-blueprint
+    role: design_authority
+    authority_scope: canonical_structure_and_policy
+  - repo_id: REPO-RUNTIME-0001
+    repo_name: ovis-runtime
+    role: implementation_authority
+    authority_scope: operational_runtime_and_tooling
+  - repo_id: REPO-KNOWLEDGE-0001
+    repo_name: ovis-knowledge
+    role: derived_knowledge_authority
+    authority_scope: derived_overlays_and_memory_surfaces
+related_modules:
+  - MOD-RUNTIME-GATEWAY-0001
+  - MOD-WORK-OBJECT-REGISTRY-0001
+  - MOD-BRANCH-CONTINUITY-0001
+  - MOD-BRANCH-COMPACTION-0001
+  - MOD-EVENT-LOG-0001
+  - MOD-PLANNING-EXECUTION-LOOP-0001
+  - MOD-REVIEW-GATE-0001
+  - MOD-OPERATOR-SURFACE-0001
+depends_on_systems: []
+direction_notes: This is the active OVIS operating kernel and current implementation center of gravity.
+basis:
+  - doctrine_approved
+  - evidenced

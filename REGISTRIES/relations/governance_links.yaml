@@ -1,0 +1,63 @@
+id: REGISTRY-RELATION-0003
+title: Governance Links
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: relation
+repo: ovis-blueprint
+path: REGISTRIES/relations/governance_links.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0003.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+related_module_ids:
+  - MOD-META-SCHEMA-POLICY-0001
+record_kind: relation_registry
+relation_name: governance_links
+authority_class: secondary
+records:
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0008
+    target_id: SYS-METADATA-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0008
+    target_id: MOD-META-SCHEMA-POLICY-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0008
+    target_id: MOD-META-REGISTRY-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0009
+    target_id: MOD-META-SCHEMA-POLICY-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0010
+    target_id: SYS-KERNEL-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0010
+    target_id: SYS-METADATA-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0011
+    target_id: MOD-META-REGISTRY-0001
+  - relation_kind: adr_governs_target
+    source_id: ADR-ARC-0012
+    target_id: SYS-METADATA-0001
+  - relation_kind: cj_implements_target
+    source_id: CJ-STRUCTURE-0001
+    target_id: SYS-METADATA-0001
+  - relation_kind: cj_implements_target
+    source_id: CJ-STRUCTURE-0002
+    target_id: SYS-KERNEL-0001
+  - relation_kind: cj_implements_target
+    source_id: CJ-STRUCTURE-0003
+    target_id: MOD-META-REGISTRY-0001
+  - relation_kind: cj_implements_target
+    source_id: CJ-STRUCTURE-0004
+    target_id: MOD-META-SCHEMA-POLICY-0001
+  - relation_kind: cj_implements_target
+    source_id: CJ-STRUCTURE-0005
+    target_id: SYS-METADATA-0001
