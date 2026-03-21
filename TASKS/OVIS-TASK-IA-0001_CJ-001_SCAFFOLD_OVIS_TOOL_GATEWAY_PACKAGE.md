@@ -1,41 +1,52 @@
 ---
-OVIS:
-  id: OVIS-TASK-IA-0001
-  title: CJ-001 Scaffold OVIS Tool Gateway Package
-  type: TASK
-  status: READY
-  version: v0.1
-  domain: IA
-  repo: ovis-blueprint
-  created: 2026-03-15
-  last_updated: 2026-03-15
-  author: codex
-  contributors: []
-  tags:
-    - cj-001
-    - p0
-    - scaffold
-    - tool-gateway
+id: CJ-IA-0001
+title: Scaffold OVIS Tool Gateway Package
+type: CJ
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: ia
+repo: ovis-blueprint
+path: TASKS/OVIS-TASK-IA-0001_CJ-001_SCAFFOLD_OVIS_TOOL_GATEWAY_PACKAGE.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/CJ-IA-0001.yaml
+module_id: MOD-TOOL-GATEWAY-0001
+module_slug: tool_gateway
+system_id: SYS-INTEGRATION-0001
+system_slug: integration_bridge
 ---
 
-# OVIS-TASK-IA-0001
+# Purpose
+
+Specify the construction job named Scaffold OVIS Tool Gateway Package.
+
+# Scope
+
+This file governs or documents Scaffold OVIS Tool Gateway Package within the ovis-blueprint repository.
+
+# Content
+
+## OVIS-TASK-IA-0001
 CJ-001 Scaffold OVIS Tool Gateway Package
 
-## Purpose
+### Task Purpose
 
 Produce the first implementation-ready scaffold plan for the OVIS Tool Gateway package without implementing the gateway itself.
 
 This task defines the minimal package structure, interface modules, result-envelope surface, and test skeleton required to begin controlled implementation in a dedicated runtime repository.
 
-## Change Type
+### Change Type
 
 STRUCTURAL
 
-## Target Repository
+### Target Repository
 
 ovis-runtime
 
-## Problem Statement
+### Problem Statement
 
 OVIS doctrine now defines:
 
@@ -50,7 +61,7 @@ However, there is still no implementation package scaffold for the OVIS Tool Gat
 
 Without a scaffolded package boundary, later implementation work will be forced to make package, interface, and test-layout decisions ad hoc.
 
-## Objective
+### Objective
 
 Define the minimal scaffold-only package plan for `ovis-runtime` with:
 
@@ -65,7 +76,7 @@ Define the minimal scaffold-only package plan for `ovis-runtime` with:
 
 The plan must remain scaffold-only and must not implement runtime behavior, bridge behavior, persistence, compaction, or real execution dispatch.
 
-## Package File Tree Proposal
+### Package File Tree Proposal
 
 ```text
 ovis-runtime/
@@ -88,9 +99,9 @@ ovis-runtime/
     test_envelopes.py
 ```
 
-## Module Responsibilities
+### Module Responsibilities
 
-### `types.py`
+#### `types.py`
 
 Define shared typed structures only:
 
@@ -101,7 +112,7 @@ Define shared typed structures only:
 
 These types must carry enough structure to remain compatible with ADR-001 through ADR-006 without implementing real execution.
 
-### `registry.py`
+#### `registry.py`
 
 Define the registry surface for:
 
@@ -111,7 +122,7 @@ Define the registry surface for:
 
 Do not implement live execution, persistence, or side-effect dispatch.
 
-### `schema_loader.py`
+#### `schema_loader.py`
 
 Define a scaffolded schema loading surface for:
 
@@ -120,13 +131,13 @@ Define a scaffolded schema loading surface for:
 
 Do not implement a final schema format or full validation engine.
 
-### `executor.py`
+#### `executor.py`
 
 Define the execution wrapper interface only.
 
 This surface may accept an `ExecutionRequest` and return an `ExecutionResultEnvelope`, but it must not perform real dispatch.
 
-### `policy_hooks.py`
+#### `policy_hooks.py`
 
 Define placeholder hook interfaces for pre-execution policy handling.
 
@@ -138,15 +149,15 @@ This must support future alignment with:
 
 Do not implement real policy evaluation.
 
-### `envelopes.py`
+#### `envelopes.py`
 
 Define the canonical result-envelope structure aligned with ADR-001 and ADR-002.
 
 This module must shape the envelope contract but must not wire it to persistence, runtime, or event systems.
 
-## Initial Interface Expectations
+### Initial Interface Expectations
 
-### `CapabilityDefinition`
+#### `CapabilityDefinition`
 
 Minimum fields:
 
@@ -155,7 +166,7 @@ Minimum fields:
 - schema reference
 - declared side-effect class
 
-### `ExecutionRequest`
+#### `ExecutionRequest`
 
 Minimum fields:
 
@@ -166,7 +177,7 @@ Minimum fields:
 - object context
 - branch context
 
-### `PolicyDecision`
+#### `PolicyDecision`
 
 Minimum fields:
 
@@ -176,7 +187,7 @@ Minimum fields:
 - approval requirement flag
 - rationale
 
-### `ExecutionResultEnvelope`
+#### `ExecutionResultEnvelope`
 
 Minimum fields:
 
@@ -190,7 +201,7 @@ Minimum fields:
 - output or payload reference / hash
 - error details
 
-## ADR Compatibility Requirements
+### ADR Compatibility Requirements
 
 The scaffold plan must remain explicitly compatible with:
 
@@ -201,7 +212,7 @@ The scaffold plan must remain explicitly compatible with:
 - ADR-005: risk class and policy profile concepts
 - ADR-006: branch continuity compatibility at the type and interface level only
 
-## Forbidden Actions
+### Forbidden Actions
 
 This scaffold plan must not include:
 
@@ -214,7 +225,7 @@ This scaffold plan must not include:
 
 The task is complete when the scaffold plan fixes package boundaries and interface surfaces without turning into full gateway implementation.
 
-## Verification Requirements
+### Verification Requirements
 
 1. `ADR_INDEX.md` includes ADR-006.
 2. The scaffold plan targets `ovis-runtime`.
@@ -223,30 +234,34 @@ The task is complete when the scaffold plan fixes package boundaries and interfa
 5. The scaffold plan references ADR-001 through ADR-006 explicitly.
 6. No implementation behavior is specified beyond interfaces, placeholders, and test skeletons.
 
-## Return Report Requirements
+### Return Report Requirements
 
-### Execution Summary
+#### Execution Summary
 Short description of work performed.
 
-### Files Created
+#### Files Created
 List of files created.
 
-### Files Updated
+#### Files Updated
 List of files updated.
 
-### Verification Results
+#### Verification Results
 Results of required checks.
 
-### Assumptions
+#### Assumptions
 Any assumptions made during execution.
 
-### Status Recommendation
+#### Status Recommendation
 Ready for review / Blocked / Needs revision
 
-## Review Outcome
+### Review Outcome
 
 To be completed by reviewer.
 
-## Linked Change Record
+### Linked Change Record
 
 To be created after task review.
+
+# References
+
+- REGISTRIES/allocators.yaml

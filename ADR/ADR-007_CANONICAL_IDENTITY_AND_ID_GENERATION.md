@@ -1,17 +1,51 @@
-# ADR-007 — Canonical Identity and ID Generation
+---
+id: ADR-ARC-0007
+title: Canonical Identity and ID Generation
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-007_CANONICAL_IDENTITY_AND_ID_GENERATION.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0007.yaml
+module_id: MOD-WORK-OBJECT-REGISTRY-0001
+module_slug: work_object_registry
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
+related_module_ids:
+- MOD-BRANCH-CONTINUITY-0001
+- MOD-EVENT-LOG-0001
+---
 
-## Status
+# Purpose
+
+Record the architecture decision named Canonical Identity and ID Generation.
+
+# Scope
+
+This file governs or documents Canonical Identity and ID Generation within the ovis-blueprint repository.
+
+# Content
+
+## ADR-007 — Canonical Identity and ID Generation
+
+### Status
 Accepted
 
-## Date
+### Date
 2026-03-15
 
-## Owner
+### Owner
 OVIS
 
 ---
 
-## Context
+### Context
 
 ADR-001 established the canonical OVIS object model, lineage contract, and append-only audit requirements.
 
@@ -45,7 +79,7 @@ Therefore OVIS requires a canonical identity and ID generation decision that fut
 
 ---
 
-## Decision
+### Decision
 
 OVIS shall use OVIS-owned canonical IDs for governed identity across runtime, event logging, branch continuity, compaction, and job artifacts.
 
@@ -78,7 +112,7 @@ Content hashes may exist for integrity or deduplication purposes, but they must 
 
 ---
 
-## Canonical Identity Principles
+### Canonical Identity Principles
 
 The canonical OVIS identity model shall follow these rules:
 
@@ -94,7 +128,7 @@ Canonical identity therefore belongs to OVIS governance, not to storage backend 
 
 ---
 
-## Canonical Format Direction
+### Canonical Format Direction
 
 The canonical format direction for OVIS IDs is:
 
@@ -133,9 +167,9 @@ No implementation may treat lexical ordering of the suffix as canonical sequence
 
 ---
 
-## event_id
+### event_id
 
-### Purpose
+#### Identity Role
 
 `event_id` names one canonical append-only `Event`.
 
@@ -146,7 +180,7 @@ Its purpose is to:
 - support correlation-aware audit reconstruction
 - preserve append-only identity even when payloads are corrected or superseded by later Events
 
-### Scope
+#### Identity Boundary
 
 `event_id` scope is one canonical `Event` record.
 
@@ -156,7 +190,7 @@ It must not be reused across:
 - retries that produce distinct append-only Events
 - child events related to the same causal chain
 
-### Generation Rules
+#### Generation Rules
 
 `event_id` shall be generated at the moment a canonical Event is created for append-only emission.
 
@@ -169,25 +203,25 @@ It shall not be derived from:
 - storage row order
 - content hash
 
-### Format
+#### Format
 
 Canonical format:
 
 - `evt_<uuid>`
 
-### Uniqueness Expectations
+#### Uniqueness Expectations
 
 Each canonical Event must have a unique `event_id`.
 
 Two distinct append-only Events must never share the same `event_id`, even if their payloads are identical.
 
-### Determinism vs Non-Determinism
+#### Determinism vs Non-Determinism
 
 `event_id` is non-deterministic by default.
 
 It must not be deterministically recomputed from event content.
 
-### Propagation Rules
+#### Propagation Rules
 
 `event_id` is not propagated across a flow.
 
@@ -196,7 +230,7 @@ Instead:
 - `parent_event_id` links related Events
 - `correlation_id` preserves shared causal grouping
 
-### Validation Expectations
+#### Validation Expectations
 
 Validation must confirm:
 
@@ -207,9 +241,9 @@ Validation must confirm:
 
 ---
 
-## branch_id
+### branch_id
 
-### Purpose
+#### Identity Role
 
 `branch_id` names one canonical `Branch` continuity container.
 
@@ -220,7 +254,7 @@ Its purpose is to:
 - survive runtime session rotation, expiration, and compaction
 - anchor downstream planning, execution, and audit to one branch lineage
 
-### Scope
+#### Identity Boundary
 
 `branch_id` scope is one governed branch of work.
 
@@ -231,7 +265,7 @@ It persists across:
 - multiple Events within the branch
 - multiple compactions of the same branch
 
-### Generation Rules
+#### Generation Rules
 
 `branch_id` shall be generated once at canonical branch creation.
 
@@ -242,19 +276,19 @@ It shall not be regenerated because:
 - compaction occurs
 - branch state is reduced or archived
 
-### Format
+#### Format
 
 Canonical format:
 
 - `br_<uuid>`
 
-### Uniqueness Expectations
+#### Uniqueness Expectations
 
 Each canonical Branch must have one unique `branch_id`.
 
 No two unrelated branches may share the same `branch_id`.
 
-### Determinism vs Non-Determinism
+#### Determinism vs Non-Determinism
 
 `branch_id` is non-deterministic by default.
 
@@ -267,7 +301,7 @@ It must not be derived from:
 
 Deterministic branch import or migration rules, if ever needed, require a later explicit decision.
 
-### Propagation Rules
+#### Propagation Rules
 
 `branch_id` is propagated across all branch-linked objects and Events where branch continuity is material.
 
@@ -279,7 +313,7 @@ It is preserved through:
 - compaction
 - audit emission
 
-### Validation Expectations
+#### Validation Expectations
 
 Validation must confirm:
 
@@ -290,9 +324,9 @@ Validation must confirm:
 
 ---
 
-## correlation_id
+### correlation_id
 
-### Purpose
+#### Identity Role
 
 `correlation_id` names one causal flow or governed action chain.
 
@@ -302,7 +336,7 @@ Its purpose is to:
 - group related Events without collapsing them into one identity
 - support replay, audit reconstruction, and idempotency reasoning
 
-### Scope
+#### Identity Boundary
 
 `correlation_id` scope is one causal flow, not one object type.
 
@@ -313,7 +347,7 @@ It may span:
 - event emission related to one governed operation
 - compaction operations and their resulting Events
 
-### Generation Rules
+#### Generation Rules
 
 `correlation_id` shall be generated once at the start of a governed causal flow.
 
@@ -321,19 +355,19 @@ It shall be issued by an OVIS-controlled runtime, command, or orchestration boun
 
 It shall not be generated independently by downstream scripts once a flow already has a canonical `correlation_id`.
 
-### Format
+#### Format
 
 Canonical format:
 
 - `corr_<uuid>`
 
-### Uniqueness Expectations
+#### Uniqueness Expectations
 
 Each active governed causal flow must have one `correlation_id`.
 
 Different causal flows should use different `correlation_id` values even when they affect the same `branch_id`.
 
-### Determinism vs Non-Determinism
+#### Determinism vs Non-Determinism
 
 `correlation_id` is non-deterministic at causal-flow creation.
 
@@ -341,7 +375,7 @@ After creation, it becomes propagation-stable rather than re-generated.
 
 It must not be deterministically recomputed from payload or sequence state.
 
-### Propagation Rules
+#### Propagation Rules
 
 `correlation_id` is propagated, not regenerated, across a causal flow.
 
@@ -356,7 +390,7 @@ A new `correlation_id` may be created only when a genuinely new causal flow begi
 
 It must not be regenerated mid-flow for convenience.
 
-### Validation Expectations
+#### Validation Expectations
 
 Validation must confirm:
 
@@ -367,9 +401,9 @@ Validation must confirm:
 
 ---
 
-## compaction_id
+### compaction_id
 
-### Purpose
+#### Identity Role
 
 `compaction_id` names one canonical `Compaction Record`.
 
@@ -380,7 +414,7 @@ Its purpose is to:
 - support append-only compaction audit events
 - distinguish multiple compactions of the same branch from one another
 
-### Scope
+#### Identity Boundary
 
 `compaction_id` scope is one compaction operation and its resulting `Compaction Record`.
 
@@ -390,7 +424,7 @@ It does not replace:
 - `event_id`
 - `correlation_id`
 
-### Generation Rules
+#### Generation Rules
 
 `compaction_id` shall be generated when a canonical compaction operation creates a `Compaction Record`.
 
@@ -401,25 +435,25 @@ It shall be OVIS-issued and shall not be derived from:
 - summary text
 - content hash
 
-### Format
+#### Format
 
 Canonical format:
 
 - `cmp_<uuid>`
 
-### Uniqueness Expectations
+#### Uniqueness Expectations
 
 Each compaction operation must have a unique `compaction_id`.
 
 Multiple compactions of the same branch must each receive distinct `compaction_id` values.
 
-### Determinism vs Non-Determinism
+#### Determinism vs Non-Determinism
 
 `compaction_id` is non-deterministic by default.
 
 It must not be recomputed deterministically from the same source range or the same compacted output.
 
-### Propagation Rules
+#### Propagation Rules
 
 `compaction_id` is propagated to:
 
@@ -429,7 +463,7 @@ It must not be recomputed deterministically from the same source range or the sa
 
 It is not a replacement for `branch_id`.
 
-### Validation Expectations
+#### Validation Expectations
 
 Validation must confirm:
 
@@ -440,9 +474,9 @@ Validation must confirm:
 
 ---
 
-## job_id
+### job_id
 
-### Purpose
+#### Identity Role
 
 `job_id` defines the canonical identity family for OVIS job-class objects.
 
@@ -452,7 +486,7 @@ Its purpose is to:
 - preserve job identity across planning and execution layers
 - support audit, review, and execution references without sequence-based naming
 
-### Scope
+#### Identity Boundary
 
 `job_id` is the family rule underlying concrete job identifiers such as:
 
@@ -463,7 +497,7 @@ ADR-001 remains authoritative for the concrete canonical object fields.
 
 ADR-007 defines the generation and validation rule for the job identity family those fields belong to.
 
-### Generation Rules
+#### Generation Rules
 
 Each canonical job artifact shall receive an OVIS-issued job-family identity at creation.
 
@@ -482,7 +516,7 @@ Job-family IDs shall not be derived from:
 - execution retry count
 - storage row order
 
-### Format
+#### Format
 
 Canonical job-family format direction:
 
@@ -493,13 +527,13 @@ Concrete canonical field formats are:
 - `job_plan_<uuid>`
 - `job_execute_<uuid>`
 
-### Uniqueness Expectations
+#### Uniqueness Expectations
 
 Each canonical job artifact must have a unique job-family ID.
 
 No two distinct `Plan Job` or `Execute Job` objects may share the same concrete job ID.
 
-### Determinism vs Non-Determinism
+#### Determinism vs Non-Determinism
 
 Job-family IDs are non-deterministic by default.
 
@@ -510,7 +544,7 @@ They must not be recomputed from:
 - retry state
 - content hash
 
-### Propagation Rules
+#### Propagation Rules
 
 Concrete job IDs are propagated to:
 
@@ -525,7 +559,7 @@ They are not replaced by:
 - retry numbers
 - result hashes
 
-### Validation Expectations
+#### Validation Expectations
 
 Validation must confirm:
 
@@ -536,7 +570,7 @@ Validation must confirm:
 
 ---
 
-## Identity, Sequence Ordering, and Content Hashes
+### Identity, Sequence Ordering, and Content Hashes
 
 OVIS canonical identity must remain separate from both sequence ordering and content-addressing.
 
@@ -563,7 +597,7 @@ These are different governance concerns and must not be collapsed into one field
 
 ---
 
-## Relationship to ADR-001
+### Relationship to ADR-001
 
 ADR-001 defines the canonical OVIS objects and requires canonical IDs as lineage anchors.
 
@@ -571,7 +605,7 @@ ADR-007 fixes how those identity anchors are generated, propagated, and validate
 
 ---
 
-## Relationship to ADR-002
+### Relationship to ADR-002
 
 ADR-002 requires idempotency, structured execution boundaries, and canonical result envelopes.
 
@@ -585,7 +619,7 @@ Function-called execution must therefore preserve canonical IDs rather than inve
 
 ---
 
-## Relationship to ADR-003
+### Relationship to ADR-003
 
 ADR-003 fixes the runtime wrapper as the only canonical model invocation path.
 
@@ -595,7 +629,7 @@ Provider-managed IDs may exist as external references, but they do not replace c
 
 ---
 
-## Relationship to ADR-004
+### Relationship to ADR-004
 
 ADR-004 requires explicit continuation and OVIS-owned branch continuity under a ZDR-first posture.
 
@@ -607,7 +641,7 @@ ADR-007 preserves that by ensuring:
 
 ---
 
-## Relationship to ADR-005
+### Relationship to ADR-005
 
 ADR-005 defines the review gate and policy profiles as the canonical execution-governance boundary.
 
@@ -615,7 +649,7 @@ ADR-007 ensures that approvals, planning, and execution can preserve stable job 
 
 ---
 
-## Relationship to ADR-006
+### Relationship to ADR-006
 
 ADR-006 defines canonical branch continuity and compaction.
 
@@ -629,7 +663,7 @@ Compaction therefore preserves identity-bearing continuity rather than replacing
 
 ---
 
-## Immediate Consequences
+### Immediate Consequences
 
 1. OVIS now has a canonical identity model for `event_id`, `branch_id`, `correlation_id`, `compaction_id`, and the job identity family.
 2. Future CJ-006 through CJ-012 work must generate canonical IDs through OVIS-controlled helpers rather than ad hoc local strings.
@@ -640,7 +674,7 @@ Compaction therefore preserves identity-bearing continuity rather than replacing
 
 ---
 
-## Deferred to Follow-on Decisions
+### Deferred to Follow-on Decisions
 
 The following are intentionally deferred:
 
@@ -654,8 +688,12 @@ These will be defined in dependent ADRs and implementation specifications.
 
 ---
 
-## Summary
+### Summary
 
 OVIS cannot preserve stable lineage, auditability, causality, or continuity if identity is left to storage accident, sequence convention, or content-derived surrogates.
 
 This ADR establishes canonical OVIS-owned identity for events, branches, causal flows, compactions, and job artifacts, fixes generation and propagation rules for those identity families, and requires that future implementation preserve the distinction between canonical IDs, sequence ordering, and content hashes across ADR-001 through ADR-006.
+
+# References
+
+- REGISTRIES/allocators.yaml

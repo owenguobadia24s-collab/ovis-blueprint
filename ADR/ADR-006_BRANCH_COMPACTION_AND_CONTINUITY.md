@@ -1,17 +1,50 @@
-# ADR-006 — Branch Compaction and Continuity
+---
+id: ADR-ARC-0006
+title: Branch Compaction and Continuity
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-006_BRANCH_COMPACTION_AND_CONTINUITY.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0006.yaml
+module_id: MOD-BRANCH-COMPACTION-0001
+module_slug: branch_compaction
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
+related_module_ids:
+- MOD-BRANCH-CONTINUITY-0001
+---
 
-## Status
+# Purpose
+
+Record the architecture decision named Branch Compaction and Continuity.
+
+# Scope
+
+This file governs or documents Branch Compaction and Continuity within the ovis-blueprint repository.
+
+# Content
+
+## ADR-006 — Branch Compaction and Continuity
+
+### Status
 Accepted
 
-## Date
+### Date
 2026-03-15
 
-## Owner
+### Owner
 OVIS
 
 ---
 
-## Context
+### Context
 
 ADR-001 established the canonical `Branch` object as the recursive continuity container and the `Compaction Record` as the governed compression artifact for branch state.
 
@@ -37,7 +70,7 @@ Therefore OVIS requires a canonical branch compaction and continuity policy.
 
 ---
 
-## Decision
+### Decision
 
 OVIS shall treat the canonical `Branch` object as the continuity container for recursive work.
 
@@ -51,7 +84,7 @@ Branch continuity remains OVIS-owned before, during, and after compaction, and m
 
 ---
 
-## Canonical Role of the Branch Object
+### Canonical Role of the Branch Object
 
 The canonical `Branch` object is the continuity container for a branch of governed work.
 
@@ -68,7 +101,7 @@ Compaction operates on branch state; it does not replace the branch object.
 
 ---
 
-## Compaction Trigger Policy
+### Compaction Trigger Policy
 
 Compaction shall be triggered when branch state becomes large, fragmented, or operationally noisy enough that direct continuation is no longer governance-efficient or planning-efficient.
 
@@ -88,7 +121,7 @@ It is required when branch continuity would otherwise depend too heavily on raw 
 
 ---
 
-## Compaction Record
+### Compaction Record
 
 The canonical `Compaction Record` remains aligned with ADR-001 and must include:
 
@@ -109,7 +142,7 @@ The compaction record is the authoritative record of a compaction event; it is n
 
 ---
 
-## Required Preserved References
+### Required Preserved References
 
 Compaction must preserve the references required for governed continuation.
 
@@ -128,7 +161,7 @@ Compaction may reduce narrative or operational noise, but it must not sever the 
 
 ---
 
-## Compacted State as a Continuity Artifact
+### Compacted State as a Continuity Artifact
 
 The compacted state referenced by a compaction record is the governed continuity artifact used to support subsequent planning and execution.
 
@@ -152,7 +185,7 @@ It is a governed continuity artifact built on top of canonical lineage.
 
 ---
 
-## Planning and Execution After Compaction
+### Planning and Execution After Compaction
 
 Compaction must support future planning and execution rather than forcing a branch restart.
 
@@ -171,7 +204,7 @@ Compaction must therefore preserve enough structured continuity that:
 
 ---
 
-## Canonical Event Emission for Compaction
+### Canonical Event Emission for Compaction
 
 Compaction must emit canonical Events consistent with ADR-001.
 
@@ -192,7 +225,7 @@ Compaction reduces continuity noise; it does not erase audit history.
 
 ---
 
-## Relationship to ADR-001
+### Relationship to ADR-001
 
 ADR-001 defines:
 
@@ -210,7 +243,7 @@ ADR-006 preserves ADR-001 by ensuring that:
 
 ---
 
-## Relationship to ADR-002
+### Relationship to ADR-002
 
 ADR-002 defines function calling as the canonical capability bus.
 
@@ -220,7 +253,7 @@ Compaction may become an executable capability later, but the governing rules fo
 
 ---
 
-## Relationship to ADR-003
+### Relationship to ADR-003
 
 ADR-003 defines the runtime wrapper as the only canonical model invocation path.
 
@@ -230,7 +263,7 @@ This means runtime support for compaction must remain subordinate to canonical b
 
 ---
 
-## Relationship to ADR-004
+### Relationship to ADR-004
 
 ADR-004 established that branch continuity remains OVIS-owned and that ZDR-first posture must avoid over-dependence on retained runtime state.
 
@@ -246,7 +279,7 @@ Compaction is therefore a continuity mechanism that reinforces ADR-004 rather th
 
 ---
 
-## Relationship to ADR-005
+### Relationship to ADR-005
 
 ADR-005 established the review gate and policy profiles for execution governance.
 
@@ -262,7 +295,7 @@ Compaction improves continuity handling, not execution authority.
 
 ---
 
-## Immediate Consequences
+### Immediate Consequences
 
 1. OVIS now has a canonical definition of the branch as the continuity container for recursive work.
 2. Future compaction design must preserve governed references rather than produce opaque summaries with broken lineage.
@@ -273,7 +306,7 @@ Compaction improves continuity handling, not execution authority.
 
 ---
 
-## Deferred to Follow-on Decisions
+### Deferred to Follow-on Decisions
 
 The following are intentionally deferred:
 
@@ -288,8 +321,12 @@ These will be defined in dependent ADRs and implementation specifications.
 
 ---
 
-## Summary
+### Summary
 
 OVIS requires a governed way to keep long-running branches usable without surrendering continuity to raw transcript accumulation or retained runtime state.
 
 This ADR establishes the canonical branch as the OVIS-owned continuity container, defines compaction as the governed reduction of branch noise, requires preserved references and canonical compaction Events, and ensures that future planning and execution can resume from compacted state while remaining aligned with ADR-001 through ADR-005.
+
+# References
+
+- REGISTRIES/allocators.yaml

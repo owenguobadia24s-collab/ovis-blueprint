@@ -1,17 +1,48 @@
-# ADR-005 — Review Gate and Policy Profiles
+---
+id: ADR-ARC-0005
+title: Review Gate and Policy Profiles
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-005_REVIEW_GATE_AND_POLICY_PROFILES.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0005.yaml
+module_id: MOD-REVIEW-GATE-0001
+module_slug: review_gate
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
+---
 
-## Status
+# Purpose
+
+Record the architecture decision named Review Gate and Policy Profiles.
+
+# Scope
+
+This file governs or documents Review Gate and Policy Profiles within the ovis-blueprint repository.
+
+# Content
+
+## ADR-005 — Review Gate and Policy Profiles
+
+### Status
 Accepted
 
-## Date
+### Date
 2026-03-15
 
-## Owner
+### Owner
 OVIS
 
 ---
 
-## Context
+### Context
 
 ADR-001 established canonical OVIS objects, lineage relations, append-only audit rules, and the Approval object as the canonical review record.
 
@@ -32,7 +63,7 @@ Therefore OVIS requires a canonical review gate and policy profile system to gov
 
 ---
 
-## Decision
+### Decision
 
 OVIS shall define a canonical review gate positioned between `Plan Job` and `Execute Job`.
 
@@ -51,7 +82,7 @@ No `Execute Job` may be created, promoted, or dispatched unless the review gate 
 
 ---
 
-## Canonical Review Gate Position
+### Canonical Review Gate Position
 
 The canonical review gate sits between `Plan Job` and `Execute Job`.
 
@@ -70,11 +101,11 @@ The review gate is therefore a canonical pre-execution enforcement boundary, not
 
 ---
 
-## Action Risk Classes
+### Action Risk Classes
 
 OVIS risk classes `R0` through `R4` classify requested actions and side effects.
 
-### R0
+#### R0
 
 No meaningful side effect.
 
@@ -85,7 +116,7 @@ Examples:
 - observational queries
 - state-neutral reasoning support
 
-### R1
+#### R1
 
 Low-impact bounded internal state or low-risk controlled changes.
 
@@ -95,7 +126,7 @@ Examples:
 - reversible low-impact administrative changes
 - low-risk governance-safe state marking
 
-### R2
+#### R2
 
 Bounded local repo or workspace mutation with reversible or reviewable effects.
 
@@ -105,7 +136,7 @@ Examples:
 - contained file updates
 - reviewable documentation or code changes within allowed scope
 
-### R3
+#### R3
 
 Elevated local execution, network use, or external-system mutation with meaningful operational risk.
 
@@ -116,7 +147,7 @@ Examples:
 - controlled writes to external systems
 - actions that can materially affect system state outside simple bounded patching
 
-### R4
+#### R4
 
 Architecture, production, trust-boundary, or irreversible high-impact actions requiring explicit human approval.
 
@@ -130,11 +161,11 @@ Examples:
 
 ---
 
-## Canonical Policy Profiles
+### Canonical Policy Profiles
 
 OVIS shall canonize the following baseline policy profiles.
 
-### read-only
+#### read-only
 
 Maximum allowable risk:
 - `R0`
@@ -142,7 +173,7 @@ Maximum allowable risk:
 Purpose:
 - permit inspection and analysis without meaningful side effects
 
-### patch-only
+#### patch-only
 
 Maximum allowable risk:
 - up to `R2`
@@ -150,7 +181,7 @@ Maximum allowable risk:
 Purpose:
 - permit bounded local repo or workspace mutation without broader execution authority
 
-### local-exec
+#### local-exec
 
 Maximum allowable risk:
 - up to `R3`
@@ -158,7 +189,7 @@ Maximum allowable risk:
 Purpose:
 - permit approved local execution paths where consequential local execution is allowed
 
-### network-escalated
+#### network-escalated
 
 Maximum allowable risk:
 - up to `R3`
@@ -166,7 +197,7 @@ Maximum allowable risk:
 Purpose:
 - permit approved outbound/network or external integration actions under explicit escalation rules
 
-### human-approved
+#### human-approved
 
 Maximum allowable risk:
 - required for `R4`
@@ -178,7 +209,7 @@ This profile may also be used as an override path for lower-risk actions when po
 
 ---
 
-## Approval Schema for the Review Gate
+### Approval Schema for the Review Gate
 
 ADR-005 refines the canonical Approval record for review-gate enforcement while remaining aligned with ADR-001.
 
@@ -210,7 +241,7 @@ These fields refine the canonical Approval object for execution governance; they
 
 ---
 
-## Enforcement Rules
+### Enforcement Rules
 
 The review gate must enforce the following rules before execution:
 
@@ -227,7 +258,7 @@ The review gate must therefore operate as an enforcement mechanism, not as advis
 
 ---
 
-## Execute Job Creation and Promotion Rules
+### Execute Job Creation and Promotion Rules
 
 The review gate controls not only dispatch but also the transition from planning into executable authority.
 
@@ -241,7 +272,7 @@ If a planned action is rejected, deferred, or blocked by profile mismatch, execu
 
 ---
 
-## Relationship to ADR-001
+### Relationship to ADR-001
 
 ADR-001 defines:
 
@@ -259,7 +290,7 @@ ADR-005 preserves ADR-001 by ensuring that:
 
 ---
 
-## Relationship to ADR-002
+### Relationship to ADR-002
 
 ADR-002 defines function calling as the canonical capability bus and requires policy enforcement before execution.
 
@@ -273,7 +304,7 @@ This means:
 
 ---
 
-## Relationship to ADR-003
+### Relationship to ADR-003
 
 ADR-003 defines the runtime wrapper as the only canonical model invocation path.
 
@@ -283,7 +314,7 @@ The runtime wrapper must therefore respect the review gate as a governance bound
 
 ---
 
-## Relationship to ADR-004
+### Relationship to ADR-004
 
 ADR-004 establishes ZDR-first session posture and explicit continuation handling.
 
@@ -297,7 +328,7 @@ This means:
 
 ---
 
-## Relationship to Legacy Direct Scripts
+### Relationship to Legacy Direct Scripts
 
 Current direct script checks and legacy storage-layer approval fields remain transitional only.
 
@@ -313,7 +344,7 @@ Legacy direct checks may remain operationally useful during transition, but they
 
 ---
 
-## Immediate Consequences
+### Immediate Consequences
 
 1. OVIS now has a canonical review boundary between `Plan Job` and `Execute Job`.
 2. Future execution design must classify requested actions by `R0–R4` risk before execution authority is granted.
@@ -324,7 +355,7 @@ Legacy direct checks may remain operationally useful during transition, but they
 
 ---
 
-## Deferred to Follow-on Decisions
+### Deferred to Follow-on Decisions
 
 The following are intentionally deferred:
 
@@ -339,10 +370,14 @@ These will be defined in dependent ADRs and implementation specifications.
 
 ---
 
-## Summary
+### Summary
 
 OVIS requires more than planning and execution artifacts.
 
 It requires a canonical governance boundary that decides when planned actions may become executable authority.
 
 This ADR establishes that boundary through a review gate positioned between `Plan Job` and `Execute Job`, using action-centric risk classes, canonical policy profiles, and Approval records that preserve lineage and enforcement consistency across ADR-001 through ADR-004.
+
+# References
+
+- REGISTRIES/allocators.yaml

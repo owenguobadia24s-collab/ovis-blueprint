@@ -1,17 +1,50 @@
-# ADR-004 — ZDR-First Session Mode and Continuation Policy
+---
+id: ADR-ARC-0004
+title: ZDR-First Session Mode and Continuation Policy
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-004_ZDR_FIRST_SESSION_MODE_AND_CONTINUATION_POLICY.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0004.yaml
+module_id: MOD-REVIEW-GATE-0001
+module_slug: review_gate
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
+related_module_ids:
+- MOD-PLANNING-EXECUTION-LOOP-0001
+---
 
-## Status
+# Purpose
+
+Record the architecture decision named ZDR-First Session Mode and Continuation Policy.
+
+# Scope
+
+This file governs or documents ZDR-First Session Mode and Continuation Policy within the ovis-blueprint repository.
+
+# Content
+
+## ADR-004 — ZDR-First Session Mode and Continuation Policy
+
+### Status
 Accepted
 
-## Date
+### Date
 2026-03-15
 
-## Owner
+### Owner
 OVIS
 
 ---
 
-## Context
+### Context
 
 ADR-001 established that canonical OVIS authority lives in OVIS-defined objects, lineage relations, append-only Events, and storage-agnostic state rather than in any external runtime surface.
 
@@ -37,7 +70,7 @@ Therefore OVIS requires an explicit session-mode and continuation policy for run
 
 ---
 
-## Decision
+### Decision
 
 OVIS shall be ZDR-first by default for governed runtime usage.
 
@@ -58,7 +91,7 @@ Durable OpenAI-managed state is optional only in approved cases and is never can
 
 ---
 
-## Canonical Default Session Posture
+### Canonical Default Session Posture
 
 The canonical default session mode for governed OVIS work is ZDR-first.
 
@@ -75,7 +108,7 @@ ZDR-first is the canonical default even if some deployments later choose a more 
 
 ---
 
-## Canonical Continuation Pattern
+### Canonical Continuation Pattern
 
 The canonical continuation pattern is explicit response chaining mediated by the runtime wrapper.
 
@@ -92,9 +125,9 @@ Continuation through opaque retained product state alone is non-canonical.
 
 ---
 
-## Allowed, Optional, and Prohibited Runtime Session Patterns
+### Allowed, Optional, and Prohibited Runtime Session Patterns
 
-### Canonical
+#### Canonical
 
 The following runtime/session pattern is canonical by default:
 
@@ -104,7 +137,7 @@ The following runtime/session pattern is canonical by default:
 - explicit continuation chaining
 - function-called capability mediation
 
-### Optional
+#### Optional
 
 The following patterns are optional where governance permits and a later implementation profile or deployment policy allows them:
 
@@ -119,7 +152,7 @@ Optional means:
 - never authoritative for canonical OVIS state
 - subject to retention, policy, and audit review
 
-### Prohibited by Default
+#### Prohibited by Default
 
 The following are prohibited as default governed runtime posture:
 
@@ -130,11 +163,11 @@ The following are prohibited as default governed runtime posture:
 
 ---
 
-## OpenAI-Managed Durable State Policy
+### OpenAI-Managed Durable State Policy
 
 OpenAI-managed durable state is classified as follows:
 
-### Prohibited
+#### Prohibited
 
 OpenAI-managed durable state is prohibited when:
 
@@ -143,7 +176,7 @@ OpenAI-managed durable state is prohibited when:
 - the workload involves canonical branch continuity that cannot safely depend on retained OpenAI state
 - the runtime mode would blur the distinction between derived context and canonical OVIS authority
 
-### Optional
+#### Optional
 
 OpenAI-managed durable state is optional when:
 
@@ -152,7 +185,7 @@ OpenAI-managed durable state is optional when:
 - OVIS-owned state remains authoritative
 - the runtime wrapper continues to maintain canonical branch/object linkage outside the retained session
 
-### Allowed but Non-Canonical
+#### Allowed but Non-Canonical
 
 Even when allowed, durable OpenAI-managed state remains:
 
@@ -164,7 +197,7 @@ It does not become sovereign OVIS state unless a later ADR explicitly says other
 
 ---
 
-## Branch Continuity and OVIS-Owned State
+### Branch Continuity and OVIS-Owned State
 
 Branch continuity belongs to OVIS-owned state, not to runtime-managed durable state.
 
@@ -184,7 +217,7 @@ This is required for portability, auditability, and long-running governed work.
 
 ---
 
-## Branch Continuity and Compaction
+### Branch Continuity and Compaction
 
 Compaction is a branch-governance concern, not a reason to transfer authority to retained runtime state.
 
@@ -202,7 +235,7 @@ In practical terms:
 
 ---
 
-## Relationship to ADR-001
+### Relationship to ADR-001
 
 ADR-001 defines canonical state, lineage, branch identity, and compaction record concepts.
 
@@ -217,7 +250,7 @@ If a session pattern cannot preserve these properties, it is not canonical for g
 
 ---
 
-## Relationship to ADR-002
+### Relationship to ADR-002
 
 ADR-002 defines function calling as the canonical capability bus.
 
@@ -231,7 +264,7 @@ This means:
 
 ---
 
-## Relationship to ADR-003
+### Relationship to ADR-003
 
 ADR-003 defines the Responses API as the canonical runtime substrate and the runtime wrapper as the only canonical invocation path.
 
@@ -245,7 +278,7 @@ ADR-003 and ADR-004 must be read together for runtime design.
 
 ---
 
-## Immediate Consequences
+### Immediate Consequences
 
 1. OVIS runtime design must assume ZDR-first as the default governed session posture.
 2. Runtime continuation work must prioritize explicit response chaining over implicit retained durable session behavior.
@@ -256,7 +289,7 @@ ADR-003 and ADR-004 must be read together for runtime design.
 
 ---
 
-## Deferred to Follow-on ADRs
+### Deferred to Follow-on ADRs
 
 The following are intentionally deferred:
 
@@ -271,10 +304,14 @@ These will be defined in dependent ADRs and implementation specifications.
 
 ---
 
-## Summary
+### Summary
 
 OVIS must preserve governed continuity without confusing convenience retention with sovereign state.
 
 This ADR establishes that the default governed posture is ZDR-first, that continuation should be explicit and wrapper-managed, and that branch continuity remains anchored in OVIS-owned state rather than in OpenAI-managed durable session memory.
 
 Durable runtime state may exist as an optional operating mode, but it is not canonical by default and does not outrank ADR-001 state authority.
+
+# References
+
+- REGISTRIES/allocators.yaml
