@@ -1,12 +1,40 @@
-# ADR-003 — Responses API as the Canonical OVIS Runtime
+---
+id: ADR-ARC-0003
+title: Responses API as the Canonical OVIS Runtime
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-003_RESPONSES_API_CANONICAL_RUNTIME.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0003.yaml
+---
+
+# Purpose
+
+Establish the Responses API as the canonical runtime substrate and the OVIS runtime wrapper as the only canonical model invocation path.
+
+# Scope
+
+This ADR governs runtime invocation boundaries, continuation and session expectations, the treatment of OpenAI-managed durable state, and the prohibition on scattered direct model calls. Exact runtime wrapper, configuration, continuation token storage, session matrix, operational policy, and retry behavior details remain deferred.
+
+# Content
 
 ## Status
+
 Accepted
 
 ## Date
+
 2026-03-15
 
 ## Owner
+
 OVIS
 
 ---
@@ -262,3 +290,8 @@ OVIS requires a single canonical runtime substrate and a single canonical invoca
 This ADR establishes Responses API as the runtime substrate and the OVIS runtime wrapper as the only canonical model invocation boundary for core implementation.
 
 OpenAI-managed durable state may exist as an optional deployment choice, but canonical OVIS authority remains outside it unless a later ADR explicitly says otherwise.
+
+# References
+
+- ADR-001_CANONICAL_STATE_MODEL_AND_LINEAGE.md
+- ADR-002_FUNCTION_CALLING_CANONICAL_CAPABILITY_BUS.md

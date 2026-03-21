@@ -1,12 +1,40 @@
-# ADR-001 — Canonical State Model and Lineage Contract
+---
+id: ADR-ARC-0001
+title: Canonical State Model and Lineage Contract
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-001_CANONICAL_STATE_MODEL_AND_LINEAGE.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0001.yaml
+---
+
+# Purpose
+
+Establish the canonical OVIS state model and lineage contract that all runtime, review, bridge, and audit behavior must map to.
+
+# Scope
+
+This ADR governs canonical OVIS object types, IDs, lineage relations, allowed transitions, audit/storage principles, and legacy mapping boundaries. Exact runtime wrapper, tool gateway, policy taxonomy, compaction, bridge registry, and storage backend details remain deferred.
+
+# Content
 
 ## Status
+
 Accepted
 
 ## Date
+
 2026-03-15
 
 ## Owner
+
 OVIS
 
 ---
@@ -453,3 +481,7 @@ OVIS does not yet become canonical by having working scripts.
 OVIS becomes canonical when all work, review, execution, bridge, and audit behavior can be expressed through a sovereign object model with provable lineage.
 
 This ADR establishes that model.
+
+# References
+
+- none

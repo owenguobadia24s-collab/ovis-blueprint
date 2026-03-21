@@ -1,0 +1,20 @@
+version: '0.1'
+intentionally_unplaced:
+  - repo: ovis-blueprint
+    path: ADR/ADR_INDEX.md
+    reason: repo_surface_navigation
+  - repo: ovis-blueprint
+    path: README.md
+    reason: repo_surface_overview
+  - repo: ovis-blueprint
+    path: TASKS/OVIS-TASK-SYS-0001_BLUEPRINT_REPO_SCAFFOLD.md
+    reason: repo_bootstrap_task
+  - repo: ovis-runtime
+    path: README.md
+    reason: repo_surface_overview
+  - repo: ovis-runtime
+    path: pyproject.toml
+    reason: repo_wide_configuration
+  - repo: ovis-runtime
+    path: docs/POST_CJ12_SYSTEM_STATE.md
+    reason: cross_cutting_runtime_report

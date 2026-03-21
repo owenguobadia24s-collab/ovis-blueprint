@@ -1,12 +1,40 @@
-# ADR-002 — Function Calling as the Canonical OVIS Capability Bus
+---
+id: ADR-ARC-0002
+title: Function Calling as the Canonical OVIS Capability Bus
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-002_FUNCTION_CALLING_CANONICAL_CAPABILITY_BUS.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0002.yaml
+---
+
+# Purpose
+
+Establish function calling as the canonical capability bus for executable internal OVIS actions.
+
+# Scope
+
+This ADR governs schema discipline, result envelopes, idempotency, side-effect boundaries, policy enforcement, and the relationship of the capability bus to legacy scripts, skills, MCP, and bridges. Exact tool registry, schema encoding, policy taxonomy, approval escalation, bridge registry, and runtime adapter details remain deferred.
+
+# Content
 
 ## Status
+
 Accepted
 
 ## Date
+
 2026-03-15
 
 ## Owner
+
 OVIS
 
 ---
@@ -317,3 +345,7 @@ OVIS requires a single canonical action surface if lineage, approvals, idempoten
 This ADR establishes function calling as that surface.
 
 Capabilities may evolve, bridges may expand, and storage backends may change, but executable authority must remain governed through explicit function-called boundaries rather than raw scripts, prompt rituals, or untrusted connector plumbing.
+
+# References
+
+- ADR-001_CANONICAL_STATE_MODEL_AND_LINEAGE.md
