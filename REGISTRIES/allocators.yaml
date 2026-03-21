@@ -1,0 +1,126 @@
+id: REGISTRY-GOV-0001
+title: OVIS Metadata Allocators
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: gov
+repo: ovis-blueprint
+path: REGISTRIES/allocators.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-GOV-0001.yaml
+families:
+  ADR-ARC:
+    next_number: 13
+    retired_ids: []
+  CJ-GOV:
+    next_number: 2
+    retired_ids: []
+  CJ-IA:
+    next_number: 2
+    retired_ids: []
+  CJ-STRUCTURE:
+    next_number: 6
+    retired_ids: []
+  CONFIG-RUN:
+    next_number: 3
+    retired_ids: []
+  DOC-KNOW:
+    next_number: 2
+    retired_ids: []
+  DOC-RUN:
+    next_number: 4
+    retired_ids: []
+  DOC-STRUCTURE:
+    next_number: 5
+    retired_ids: []
+  DOC-VAL:
+    next_number: 2
+    retired_ids: []
+  DOC-WF:
+    next_number: 2
+    retired_ids: []
+  MANIFEST-GOV:
+    next_number: 4
+    retired_ids: []
+  MODULE-BRANCH:
+    next_number: 5
+    retired_ids: []
+  MODULE-COMPACTION:
+    next_number: 9
+    retired_ids: []
+  MODULE-EVENT:
+    next_number: 12
+    retired_ids: []
+  MODULE-GATEWAY:
+    next_number: 10
+    retired_ids: []
+  MODULE-GOV:
+    next_number: 14
+    retired_ids: []
+  MODULE-IDS:
+    next_number: 2
+    retired_ids: []
+  MODULE-LOOP:
+    next_number: 4
+    retired_ids: []
+  MODULE-OPERATOR:
+    next_number: 5
+    retired_ids: []
+  MODULE-RUNTIME:
+    next_number: 10
+    retired_ids: []
+  MODULE-STATE:
+    next_number: 20
+    retired_ids: []
+  POLICY-GOV:
+    next_number: 3
+    retired_ids: []
+  REGISTRY-MODULE:
+    next_number: 18
+    retired_ids: []
+  REGISTRY-RELATION:
+    next_number: 5
+    retired_ids: []
+  REGISTRY-REPO:
+    next_number: 4
+    retired_ids: []
+  REGISTRY-SYSTEM:
+    next_number: 5
+    retired_ids: []
+  SCHEMA-VAL:
+    next_number: 2
+    retired_ids: []
+  TEMPLATE-TEMP:
+    next_number: 4
+    retired_ids: []
+  TEST-BRANCH:
+    next_number: 5
+    retired_ids: []
+  TEST-COMPACTION:
+    next_number: 6
+    retired_ids: []
+  TEST-EVENT:
+    next_number: 8
+    retired_ids: []
+  TEST-GATEWAY:
+    next_number: 8
+    retired_ids: []
+  TEST-GOV:
+    next_number: 3
+    retired_ids: []
+  TEST-LOOP:
+    next_number: 2
+    retired_ids: []
+  TEST-OPERATOR:
+    next_number: 2
+    retired_ids: []
+  TEST-RUNTIME:
+    next_number: 9
+    retired_ids: []
+  TEST-STATE:
+    next_number: 6
+    retired_ids: []

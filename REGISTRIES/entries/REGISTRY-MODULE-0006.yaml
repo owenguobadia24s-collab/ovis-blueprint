@@ -1,0 +1,18 @@
+id: REGISTRY-MODULE-0006
+title: Planning Execution Loop
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: module
+repo: ovis-blueprint
+path: REGISTRIES/modules/MOD-PLANNING-EXECUTION-LOOP-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0006.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system

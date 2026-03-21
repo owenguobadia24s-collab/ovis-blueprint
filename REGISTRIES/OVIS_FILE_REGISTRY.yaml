@@ -1,0 +1,3625 @@
+registry_version: '0.1'
+source_refs:
+  ovis-blueprint: 2fc21b14d10d5bf75d954a2564d5e2edf31c00a1
+  ovis-knowledge: 2ea5bff53fbdd7243afd7fb661031d934dd10721
+  ovis-runtime: 22136522433ca8919ab050c11f0ea094431b7ab7
+allocators:
+  ADR-ARC:
+    next_number: 13
+    retired_ids: []
+  CJ-GOV:
+    next_number: 2
+    retired_ids: []
+  CJ-IA:
+    next_number: 2
+    retired_ids: []
+  CJ-STRUCTURE:
+    next_number: 6
+    retired_ids: []
+  CONFIG-RUN:
+    next_number: 3
+    retired_ids: []
+  DOC-KNOW:
+    next_number: 2
+    retired_ids: []
+  DOC-RUN:
+    next_number: 4
+    retired_ids: []
+  DOC-STRUCTURE:
+    next_number: 5
+    retired_ids: []
+  DOC-VAL:
+    next_number: 2
+    retired_ids: []
+  DOC-WF:
+    next_number: 2
+    retired_ids: []
+  MANIFEST-GOV:
+    next_number: 4
+    retired_ids: []
+  MODULE-BRANCH:
+    next_number: 5
+    retired_ids: []
+  MODULE-COMPACTION:
+    next_number: 9
+    retired_ids: []
+  MODULE-EVENT:
+    next_number: 12
+    retired_ids: []
+  MODULE-GATEWAY:
+    next_number: 10
+    retired_ids: []
+  MODULE-GOV:
+    next_number: 14
+    retired_ids: []
+  MODULE-IDS:
+    next_number: 2
+    retired_ids: []
+  MODULE-LOOP:
+    next_number: 4
+    retired_ids: []
+  MODULE-OPERATOR:
+    next_number: 5
+    retired_ids: []
+  MODULE-RUNTIME:
+    next_number: 10
+    retired_ids: []
+  MODULE-STATE:
+    next_number: 20
+    retired_ids: []
+  POLICY-GOV:
+    next_number: 3
+    retired_ids: []
+  REGISTRY-MODULE:
+    next_number: 18
+    retired_ids: []
+  REGISTRY-RELATION:
+    next_number: 5
+    retired_ids: []
+  REGISTRY-REPO:
+    next_number: 4
+    retired_ids: []
+  REGISTRY-SYSTEM:
+    next_number: 5
+    retired_ids: []
+  SCHEMA-VAL:
+    next_number: 2
+    retired_ids: []
+  TEMPLATE-TEMP:
+    next_number: 4
+    retired_ids: []
+  TEST-BRANCH:
+    next_number: 5
+    retired_ids: []
+  TEST-COMPACTION:
+    next_number: 6
+    retired_ids: []
+  TEST-EVENT:
+    next_number: 8
+    retired_ids: []
+  TEST-GATEWAY:
+    next_number: 8
+    retired_ids: []
+  TEST-GOV:
+    next_number: 3
+    retired_ids: []
+  TEST-LOOP:
+    next_number: 2
+    retired_ids: []
+  TEST-OPERATOR:
+    next_number: 2
+    retired_ids: []
+  TEST-RUNTIME:
+    next_number: 9
+    retired_ids: []
+  TEST-STATE:
+    next_number: 6
+    retired_ids: []
+entries:
+  ADR-ARC-0001:
+    id: ADR-ARC-0001
+    title: Canonical State Model and Lineage Contract
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-001_CANONICAL_STATE_MODEL_AND_LINEAGE.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0001.yaml
+  ADR-ARC-0002:
+    id: ADR-ARC-0002
+    title: Function Calling as the Canonical OVIS Capability Bus
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-002_FUNCTION_CALLING_CANONICAL_CAPABILITY_BUS.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0002.yaml
+  ADR-ARC-0003:
+    id: ADR-ARC-0003
+    title: Responses API as the Canonical OVIS Runtime
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-003_RESPONSES_API_CANONICAL_RUNTIME.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0003.yaml
+  ADR-ARC-0004:
+    id: ADR-ARC-0004
+    title: ZDR-First Session Mode and Continuation Policy
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-004_ZDR_FIRST_SESSION_MODE_AND_CONTINUATION_POLICY.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0004.yaml
+    module_id: MOD-REVIEW-GATE-0001
+    module_slug: review_gate
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-PLANNING-EXECUTION-LOOP-0001
+  ADR-ARC-0005:
+    id: ADR-ARC-0005
+    title: Review Gate and Policy Profiles
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-005_REVIEW_GATE_AND_POLICY_PROFILES.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0005.yaml
+    module_id: MOD-REVIEW-GATE-0001
+    module_slug: review_gate
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  ADR-ARC-0006:
+    id: ADR-ARC-0006
+    title: Branch Compaction and Continuity
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-006_BRANCH_COMPACTION_AND_CONTINUITY.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0006.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  ADR-ARC-0007:
+    id: ADR-ARC-0007
+    title: Canonical Identity and ID Generation
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-007_CANONICAL_IDENTITY_AND_ID_GENERATION.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0007.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+    - MOD-EVENT-LOG-0001
+  ADR-ARC-0008:
+    id: ADR-ARC-0008
+    title: Workspace Metadata Envelope and Registry Governance
+    type: ADR
+    status: accepted
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-008_WORKSPACE_METADATA_ENVELOPE_AND_REGISTRY_GOVERNANCE.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0008.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-REGISTRY-0001
+  ADR-ARC-0009:
+    id: ADR-ARC-0009
+    title: Artifact Identity and Containment Separation
+    type: ADR
+    status: proposed
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-009_ARTIFACT_IDENTITY_AND_CONTAINMENT_SEPARATION.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0009.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-REGISTRY-0001
+  ADR-ARC-0010:
+    id: ADR-ARC-0010
+    title: System Module Repo Registry Model
+    type: ADR
+    status: proposed
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-010_SYSTEM_MODULE_REPO_REGISTRY_MODEL.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0010.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  ADR-ARC-0011:
+    id: ADR-ARC-0011
+    title: Module Introduction and Taxonomy Governance
+    type: ADR
+    status: proposed
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-011_MODULE_INTRODUCTION_AND_TAXONOMY_GOVERNANCE.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0011.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  ADR-ARC-0012:
+    id: ADR-ARC-0012
+    title: OVIS OVC Ecosystem Boundary
+    type: ADR
+    status: proposed
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: arc
+    repo: ovis-blueprint
+    path: ADR/ADR-012_OVIS_OVC_ECOSYSTEM_BOUNDARY.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0012.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  CJ-GOV-0001:
+    id: CJ-GOV-0001
+    title: Workspace Metadata Rollout
+    type: CJ
+    status: draft
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: gov
+    repo: ovis-blueprint
+    path: TASKS/CJ-GOV-0001_WORKSPACE_METADATA_ROLLOUT.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-GOV-0001.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-REGISTRY-0001
+    - MOD-META-RECONCILE-0001
+    - MOD-META-SCAFFOLD-0001
+  CJ-IA-0001:
+    id: CJ-IA-0001
+    title: Scaffold OVIS Tool Gateway Package
+    type: CJ
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: ia
+    repo: ovis-blueprint
+    path: TASKS/OVIS-TASK-IA-0001_CJ-001_SCAFFOLD_OVIS_TOOL_GATEWAY_PACKAGE.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-IA-0001.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  CJ-STRUCTURE-0001:
+    id: CJ-STRUCTURE-0001
+    title: Structural Registry Scaffold Rollout
+    type: CJ
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: TASKS/CJ-STRUCTURE-0001_STRUCTURAL_REGISTRY_SCAFFOLD_ROLLOUT.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-STRUCTURE-0001.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  CJ-STRUCTURE-0002:
+    id: CJ-STRUCTURE-0002
+    title: Initial System Registry Population
+    type: CJ
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: TASKS/CJ-STRUCTURE-0002_INITIAL_SYSTEM_REGISTRY_POPULATION.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-STRUCTURE-0002.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  CJ-STRUCTURE-0003:
+    id: CJ-STRUCTURE-0003
+    title: Initial Module Registry Population
+    type: CJ
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: TASKS/CJ-STRUCTURE-0003_INITIAL_MODULE_REGISTRY_POPULATION.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-STRUCTURE-0003.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  CJ-STRUCTURE-0004:
+    id: CJ-STRUCTURE-0004
+    title: Metadata Schema Extension for Module and System Membership
+    type: CJ
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: TASKS/CJ-STRUCTURE-0004_METADATA_SCHEMA_EXTENSION_FOR_MEMBERSHIP.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-STRUCTURE-0004.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-REGISTRY-0001
+  CJ-STRUCTURE-0005:
+    id: CJ-STRUCTURE-0005
+    title: File to Module Mapping Pass
+    type: CJ
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: TASKS/CJ-STRUCTURE-0005_FILE_TO_MODULE_MAPPING_PASS.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CJ-STRUCTURE-0005.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  CONFIG-RUN-0002:
+    id: CONFIG-RUN-0002
+    title: OVIS Runtime Git Ignore Rules
+    type: CONFIG
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: run
+    repo: ovis-runtime
+    path: .gitignore
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/CONFIG-RUN-0002.yaml
+  DOC-KNOW-0001:
+    id: DOC-KNOW-0001
+    title: OVIS Knowledge
+    type: DOC
+    status: active
+    authority: derived
+    version: '0.1'
+    layer: knowledge
+    domain: know
+    repo: ovis-knowledge
+    path: README.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-KNOW-0001.yaml
+    module_id: MOD-SYSTEM-MEMORY-0001
+    module_slug: system_memory
+    system_id: SYS-RETRIEVAL-MEMORY-0001
+    system_slug: retrieval_memory
+    related_module_ids:
+    - MOD-RETRIEVAL-LAYER-0001
+  DOC-RUN-0003:
+    id: DOC-RUN-0003
+    title: Schema Authoring Principle
+    type: DOC
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: run
+    repo: ovis-runtime
+    path: docs/SCHEMA_AUTHORING_PRINCIPLE.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-RUN-0003.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  DOC-STRUCTURE-0001:
+    id: DOC-STRUCTURE-0001
+    title: OVIS System Taxonomy
+    type: DOC
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: SYSTEM_TAXONOMY.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-STRUCTURE-0001.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  DOC-STRUCTURE-0002:
+    id: DOC-STRUCTURE-0002
+    title: OVIS Module Taxonomy
+    type: DOC
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: MODULE_TAXONOMY.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-STRUCTURE-0002.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  DOC-STRUCTURE-0003:
+    id: DOC-STRUCTURE-0003
+    title: OVIS Repo Role Map
+    type: DOC
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: REPO_ROLE_MAP.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-STRUCTURE-0003.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  DOC-STRUCTURE-0004:
+    id: DOC-STRUCTURE-0004
+    title: OVIS Relation Rules
+    type: DOC
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: structure
+    repo: ovis-blueprint
+    path: RELATION_RULES.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-STRUCTURE-0004.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  DOC-VAL-0001:
+    id: DOC-VAL-0001
+    title: Validators Workspace
+    type: DOC
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: val
+    repo: ovis-blueprint
+    path: validators/README.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-VAL-0001.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  DOC-WF-0001:
+    id: DOC-WF-0001
+    title: Phase 0 Research and Blueprint
+    type: DOC
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: wf
+    repo: ovis-blueprint
+    path: PHASES/PHASE_0_RESEARCH_AND_BLUEPRINT.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/DOC-WF-0001.yaml
+    module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    module_slug: planning_execution_loop
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MANIFEST-GOV-0001:
+    id: MANIFEST-GOV-0001
+    title: Blueprint Metadata Workflow
+    type: MANIFEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: blueprint
+    domain: gov
+    repo: ovis-blueprint
+    path: .github/workflows/ovis-metadata.yml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MANIFEST-GOV-0001.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  MANIFEST-GOV-0002:
+    id: MANIFEST-GOV-0002
+    title: Runtime Metadata Workflow
+    type: MANIFEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: .github/workflows/ovis-metadata.yml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MANIFEST-GOV-0002.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  MANIFEST-GOV-0003:
+    id: MANIFEST-GOV-0003
+    title: Knowledge Metadata Workflow
+    type: MANIFEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: knowledge
+    domain: gov
+    repo: ovis-knowledge
+    path: .github/workflows/ovis-metadata.yml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MANIFEST-GOV-0003.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  MODULE-BRANCH-0001:
+    id: MODULE-BRANCH-0001
+    title: Ovis Branch Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: src/ovis_branch/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-BRANCH-0001.yaml
+    module_id: MOD-BRANCH-CONTINUITY-0001
+    module_slug: branch_continuity
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-EVENT-LOG-0001
+  MODULE-BRANCH-0002:
+    id: MODULE-BRANCH-0002
+    title: Lifecycle Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: src/ovis_branch/lifecycle.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-BRANCH-0002.yaml
+    module_id: MOD-BRANCH-CONTINUITY-0001
+    module_slug: branch_continuity
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-EVENT-LOG-0001
+  MODULE-BRANCH-0003:
+    id: MODULE-BRANCH-0003
+    title: Store Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: src/ovis_branch/store.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-BRANCH-0003.yaml
+    module_id: MOD-BRANCH-CONTINUITY-0001
+    module_slug: branch_continuity
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-EVENT-LOG-0001
+  MODULE-BRANCH-0004:
+    id: MODULE-BRANCH-0004
+    title: Types Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: src/ovis_branch/types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-BRANCH-0004.yaml
+    module_id: MOD-BRANCH-CONTINUITY-0001
+    module_slug: branch_continuity
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-EVENT-LOG-0001
+  MODULE-COMPACTION-0001:
+    id: MODULE-COMPACTION-0001
+    title: Ovis Branch Compaction Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0001.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0002:
+    id: MODULE-COMPACTION-0002
+    title: Commands Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/commands.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0002.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0003:
+    id: MODULE-COMPACTION-0003
+    title: Executor Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/executor.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0003.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0004:
+    id: MODULE-COMPACTION-0004
+    title: Hooks Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/hooks.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0004.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0005:
+    id: MODULE-COMPACTION-0005
+    title: Runtime Compactor Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/runtime_compactor.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0005.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0006:
+    id: MODULE-COMPACTION-0006
+    title: Triggers Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/triggers.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0006.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0007:
+    id: MODULE-COMPACTION-0007
+    title: Types Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0007.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-COMPACTION-0008:
+    id: MODULE-COMPACTION-0008
+    title: Validation Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: src/ovis_branch_compaction/validation.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-COMPACTION-0008.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+  MODULE-EVENT-0001:
+    id: MODULE-EVENT-0001
+    title: Ovis Event Log Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0001.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0002:
+    id: MODULE-EVENT-0002
+    title: Backends Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/backends/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0002.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0003:
+    id: MODULE-EVENT-0003
+    title: File Writer Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/backends/file_writer.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0003.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0004:
+    id: MODULE-EVENT-0004
+    title: Memory Writer Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/backends/memory_writer.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0004.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0005:
+    id: MODULE-EVENT-0005
+    title: Constants Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/constants.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0005.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0006:
+    id: MODULE-EVENT-0006
+    title: Emit Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/emit.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0006.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0007:
+    id: MODULE-EVENT-0007
+    title: Envelopes Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/envelopes.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0007.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0008:
+    id: MODULE-EVENT-0008
+    title: Hash Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/hash.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0008.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0009:
+    id: MODULE-EVENT-0009
+    title: Linkage Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/linkage.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0009.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0010:
+    id: MODULE-EVENT-0010
+    title: Validation Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/validation.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0010.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-EVENT-0011:
+    id: MODULE-EVENT-0011
+    title: Writer Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: src/ovis_event_log/writer.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-EVENT-0011.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-GATEWAY-0001:
+    id: MODULE-GATEWAY-0001
+    title: Ovis Tool Gateway Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0001.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0002:
+    id: MODULE-GATEWAY-0002
+    title: Capabilities Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/capabilities/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0002.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0003:
+    id: MODULE-GATEWAY-0003
+    title: Dispatcher Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/dispatcher.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0003.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0004:
+    id: MODULE-GATEWAY-0004
+    title: Envelopes Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/envelopes.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0004.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0005:
+    id: MODULE-GATEWAY-0005
+    title: Executor Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/executor.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0005.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0006:
+    id: MODULE-GATEWAY-0006
+    title: Policy Hooks Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/policy_hooks.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0006.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0007:
+    id: MODULE-GATEWAY-0007
+    title: Registry Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/registry.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0007.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0008:
+    id: MODULE-GATEWAY-0008
+    title: Schema Loader Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/schema_loader.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0008.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GATEWAY-0009:
+    id: MODULE-GATEWAY-0009
+    title: Types Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: src/ovis_tool_gateway/types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GATEWAY-0009.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  MODULE-GOV-0001:
+    id: MODULE-GOV-0001
+    title: OVIS Metadata Package
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0001.yaml
+  MODULE-GOV-0002:
+    id: MODULE-GOV-0002
+    title: OVIS Metadata Types
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0002.yaml
+  MODULE-GOV-0003:
+    id: MODULE-GOV-0003
+    title: OVIS Metadata Parser
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/parser.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0003.yaml
+  MODULE-GOV-0004:
+    id: MODULE-GOV-0004
+    title: OVIS Metadata Schema Validation
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/schema.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0004.yaml
+  MODULE-GOV-0005:
+    id: MODULE-GOV-0005
+    title: OVIS Metadata Scanner
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/scanner.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0005.yaml
+  MODULE-GOV-0006:
+    id: MODULE-GOV-0006
+    title: OVIS Metadata Registry IO
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/registry.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0006.yaml
+  MODULE-GOV-0007:
+    id: MODULE-GOV-0007
+    title: OVIS Metadata Reconciler
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/reconciler.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0007.yaml
+  MODULE-GOV-0008:
+    id: MODULE-GOV-0008
+    title: OVIS Metadata Scaffold Helper
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/scaffold.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0008.yaml
+  MODULE-GOV-0009:
+    id: MODULE-GOV-0009
+    title: OVIS Metadata Normalization Scope
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/scope.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0009.yaml
+  MODULE-GOV-0010:
+    id: MODULE-GOV-0010
+    title: OVIS Metadata Registry Derivation
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/derive.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0010.yaml
+  MODULE-GOV-0011:
+    id: MODULE-GOV-0011
+    title: OVIS Metadata Registry Drift Detection
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/drift.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0011.yaml
+  MODULE-GOV-0012:
+    id: MODULE-GOV-0012
+    title: OVIS Metadata Normalizer
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/normalizer.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0012.yaml
+  MODULE-GOV-0013:
+    id: MODULE-GOV-0013
+    title: OVIS Metadata Git Source
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: src/ovis_metadata/source.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0013.yaml
+  MODULE-IDS-0001:
+    id: MODULE-IDS-0001
+    title: Ovis Ids Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: ids
+    repo: ovis-runtime
+    path: src/ovis_ids/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-IDS-0001.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-BRANCH-CONTINUITY-0001
+    - MOD-EVENT-LOG-0001
+  MODULE-LOOP-0001:
+    id: MODULE-LOOP-0001
+    title: Ovis Loop Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: loop
+    repo: ovis-runtime
+    path: src/ovis_loop/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-LOOP-0001.yaml
+    module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    module_slug: planning_execution_loop
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-LOOP-0002:
+    id: MODULE-LOOP-0002
+    title: Runner Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: loop
+    repo: ovis-runtime
+    path: src/ovis_loop/runner.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-LOOP-0002.yaml
+    module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    module_slug: planning_execution_loop
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-LOOP-0003:
+    id: MODULE-LOOP-0003
+    title: Types Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: loop
+    repo: ovis-runtime
+    path: src/ovis_loop/types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-LOOP-0003.yaml
+    module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    module_slug: planning_execution_loop
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-OPERATOR-0002:
+    id: MODULE-OPERATOR-0002
+    title: OVIS Operator CLI
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: operator
+    repo: ovis-runtime
+    path: src/ovis_operator/cli.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-OPERATOR-0002.yaml
+  MODULE-OPERATOR-0003:
+    id: MODULE-OPERATOR-0003
+    title: Ovis Operator Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: operator
+    repo: ovis-runtime
+    path: src/ovis_operator/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-OPERATOR-0003.yaml
+    module_id: MOD-OPERATOR-SURFACE-0001
+    module_slug: operator_surface
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-OPERATOR-0004:
+    id: MODULE-OPERATOR-0004
+    title: Formatting Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: operator
+    repo: ovis-runtime
+    path: src/ovis_operator/formatting.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-OPERATOR-0004.yaml
+    module_id: MOD-OPERATOR-SURFACE-0001
+    module_slug: operator_surface
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0001:
+    id: MODULE-RUNTIME-0001
+    title: Ovis Responses Runtime Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0001.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0002:
+    id: MODULE-RUNTIME-0002
+    title: Adapter Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/adapter.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0002.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0003:
+    id: MODULE-RUNTIME-0003
+    title: Config Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/config.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0003.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0004:
+    id: MODULE-RUNTIME-0004
+    title: Continuation Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/continuation.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0004.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0005:
+    id: MODULE-RUNTIME-0005
+    title: Hooks Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/hooks.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0005.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0006:
+    id: MODULE-RUNTIME-0006
+    title: Provider Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/provider/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0006.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0007:
+    id: MODULE-RUNTIME-0007
+    title: Openai Responses Adapter Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/provider/openai_responses_adapter.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0007.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0008:
+    id: MODULE-RUNTIME-0008
+    title: Session Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/session.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0008.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-RUNTIME-0009:
+    id: MODULE-RUNTIME-0009
+    title: Types Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: src/ovis_responses_runtime/types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-RUNTIME-0009.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0001:
+    id: MODULE-STATE-0001
+    title: Ovis State Models Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0001.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0002:
+    id: MODULE-STATE-0002
+    title: Base Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/base.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0002.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0003:
+    id: MODULE-STATE-0003
+    title: Enums Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/enums.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0003.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0004:
+    id: MODULE-STATE-0004
+    title: Export Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/export/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0004.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0005:
+    id: MODULE-STATE-0005
+    title: Json Schema Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/export/json_schema.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0005.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0006:
+    id: MODULE-STATE-0006
+    title: Ids Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/ids.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0006.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0007:
+    id: MODULE-STATE-0007
+    title: Models Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0007.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0008:
+    id: MODULE-STATE-0008
+    title: Approval Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/approval.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0008.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0009:
+    id: MODULE-STATE-0009
+    title: Branch Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/branch.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0009.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0010:
+    id: MODULE-STATE-0010
+    title: Bridge Action Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/bridge_action.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0010.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0011:
+    id: MODULE-STATE-0011
+    title: Compaction Record Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/compaction_record.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0011.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0012:
+    id: MODULE-STATE-0012
+    title: Event Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/event.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0012.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0013:
+    id: MODULE-STATE-0013
+    title: Execute Job Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/execute_job.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0013.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0014:
+    id: MODULE-STATE-0014
+    title: Plan Job Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/plan_job.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0014.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0015:
+    id: MODULE-STATE-0015
+    title: Signal Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/signal.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0015.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0016:
+    id: MODULE-STATE-0016
+    title: Work Object Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/models/work_object.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0016.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0017:
+    id: MODULE-STATE-0017
+    title: References Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/references.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0017.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0018:
+    id: MODULE-STATE-0018
+    title: Validators Package Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/validators/__init__.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0018.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  MODULE-STATE-0019:
+    id: MODULE-STATE-0019
+    title: Transitions Module
+    type: MODULE
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: src/ovis_state_models/validators/transitions.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/MODULE-STATE-0019.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  POLICY-GOV-0001:
+    id: POLICY-GOV-0001
+    title: AI Write Permissions
+    type: POLICY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: gov
+    repo: ovis-blueprint
+    path: POLICIES/AI_WRITE_PERMISSIONS.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/POLICY-GOV-0001.yaml
+    module_id: MOD-REVIEW-GATE-0001
+    module_slug: review_gate
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  POLICY-GOV-0002:
+    id: POLICY-GOV-0002
+    title: OVIS Metadata Standard
+    type: POLICY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: gov
+    repo: ovis-blueprint
+    path: POLICIES/OVIS_METADATA_STANDARD.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/POLICY-GOV-0002.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-HEADER-0001
+    - MOD-META-REGISTRY-0001
+  REGISTRY-MODULE-0001:
+    id: REGISTRY-MODULE-0001
+    title: Runtime Gateway
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-RUNTIME-GATEWAY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0001.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0002:
+    id: REGISTRY-MODULE-0002
+    title: Work Object Registry
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-WORK-OBJECT-REGISTRY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0002.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0003:
+    id: REGISTRY-MODULE-0003
+    title: Branch Continuity
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-BRANCH-CONTINUITY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0003.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0004:
+    id: REGISTRY-MODULE-0004
+    title: Branch Compaction
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-BRANCH-COMPACTION-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0004.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0005:
+    id: REGISTRY-MODULE-0005
+    title: Event Log
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-EVENT-LOG-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0005.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0006:
+    id: REGISTRY-MODULE-0006
+    title: Planning Execution Loop
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-PLANNING-EXECUTION-LOOP-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0006.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0007:
+    id: REGISTRY-MODULE-0007
+    title: Review Gate
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-REVIEW-GATE-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0007.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0008:
+    id: REGISTRY-MODULE-0008
+    title: Operator Surface
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-OPERATOR-SURFACE-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0008.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0009:
+    id: REGISTRY-MODULE-0009
+    title: Tool Gateway
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-TOOL-GATEWAY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0009.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0010:
+    id: REGISTRY-MODULE-0010
+    title: Bridge Dispatch
+    type: REGISTRY
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-BRIDGE-DISPATCH-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0010.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0011:
+    id: REGISTRY-MODULE-0011
+    title: Retrieval Layer
+    type: REGISTRY
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-RETRIEVAL-LAYER-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0011.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0012:
+    id: REGISTRY-MODULE-0012
+    title: System Memory
+    type: REGISTRY
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-SYSTEM-MEMORY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0012.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0013:
+    id: REGISTRY-MODULE-0013
+    title: Metadata Header
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-META-HEADER-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0013.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0014:
+    id: REGISTRY-MODULE-0014
+    title: Metadata Schema Policy
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-META-SCHEMA-POLICY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0014.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0015:
+    id: REGISTRY-MODULE-0015
+    title: Metadata Registry
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-META-REGISTRY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0015.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0016:
+    id: REGISTRY-MODULE-0016
+    title: Metadata Reconcile
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-META-RECONCILE-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0016.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-MODULE-0017:
+    id: REGISTRY-MODULE-0017
+    title: Metadata Scaffold
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: module
+    repo: ovis-blueprint
+    path: REGISTRIES/modules/MOD-META-SCAFFOLD-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-MODULE-0017.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-RELATION-0001:
+    id: REGISTRY-RELATION-0001
+    title: Module Dependency Relations
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: relation
+    repo: ovis-blueprint
+    path: REGISTRIES/relations/module_dependencies.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0001.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  REGISTRY-RELATION-0002:
+    id: REGISTRY-RELATION-0002
+    title: System Dependency Relations
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: relation
+    repo: ovis-blueprint
+    path: REGISTRIES/relations/system_dependencies.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0002.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  REGISTRY-RELATION-0003:
+    id: REGISTRY-RELATION-0003
+    title: Governance Links
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: relation
+    repo: ovis-blueprint
+    path: REGISTRIES/relations/governance_links.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0003.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  REGISTRY-RELATION-0004:
+    id: REGISTRY-RELATION-0004
+    title: Repo Participation Relations
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: relation
+    repo: ovis-blueprint
+    path: REGISTRIES/relations/repo_participation.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-RELATION-0004.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-SCHEMA-POLICY-0001
+  REGISTRY-REPO-0001:
+    id: REGISTRY-REPO-0001
+    title: ovis-blueprint
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: repo
+    repo: ovis-blueprint
+    path: REGISTRIES/repos/REPO-BLUEPRINT-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-REPO-0001.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-REPO-0002:
+    id: REGISTRY-REPO-0002
+    title: ovis-runtime
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: repo
+    repo: ovis-blueprint
+    path: REGISTRIES/repos/REPO-RUNTIME-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-REPO-0002.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-REPO-0003:
+    id: REGISTRY-REPO-0003
+    title: ovis-knowledge
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: repo
+    repo: ovis-blueprint
+    path: REGISTRIES/repos/REPO-KNOWLEDGE-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-REPO-0003.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-SYSTEM-0001:
+    id: REGISTRY-SYSTEM-0001
+    title: OVIS Cognitive Infrastructure Kernel
+    type: REGISTRY
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: system
+    repo: ovis-blueprint
+    path: REGISTRIES/systems/SYS-KERNEL-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0001.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-SYSTEM-0002:
+    id: REGISTRY-SYSTEM-0002
+    title: OVIS Metadata System
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: system
+    repo: ovis-blueprint
+    path: REGISTRIES/systems/SYS-METADATA-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0002.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-SYSTEM-0003:
+    id: REGISTRY-SYSTEM-0003
+    title: OVIS Integration and Bridge System
+    type: REGISTRY
+    status: emerging
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: system
+    repo: ovis-blueprint
+    path: REGISTRIES/systems/SYS-INTEGRATION-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0003.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  REGISTRY-SYSTEM-0004:
+    id: REGISTRY-SYSTEM-0004
+    title: OVIS Retrieval and Memory System
+    type: REGISTRY
+    status: planned
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: system
+    repo: ovis-blueprint
+    path: REGISTRIES/systems/SYS-RETRIEVAL-MEMORY-0001.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0004.yaml
+    module_id: MOD-META-REGISTRY-0001
+    module_slug: meta_registry
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+  SCHEMA-VAL-0001:
+    id: SCHEMA-VAL-0001
+    title: OVIS Metadata Schema
+    type: SCHEMA
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: val
+    repo: ovis-blueprint
+    path: validators/OVIS_METADATA_SCHEMA.yaml
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/SCHEMA-VAL-0001.yaml
+    module_id: MOD-META-SCHEMA-POLICY-0001
+    module_slug: meta_schema_policy
+    system_id: SYS-METADATA-0001
+    system_slug: metadata_system
+    related_module_ids:
+    - MOD-META-HEADER-0001
+    - MOD-META-REGISTRY-0001
+  TEMPLATE-TEMP-0001:
+    id: TEMPLATE-TEMP-0001
+    title: Codex Task Contract Template
+    type: TEMPLATE
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: temp
+    repo: ovis-blueprint
+    path: TEMPLATES/CODEX_TASK_CONTRACT.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0001.yaml
+    module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    module_slug: planning_execution_loop
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-REVIEW-GATE-0001
+  TEMPLATE-TEMP-0002:
+    id: TEMPLATE-TEMP-0002
+    title: Codex Review Checklist Template
+    type: TEMPLATE
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: temp
+    repo: ovis-blueprint
+    path: TEMPLATES/CODEX_REVIEW_CHECKLIST.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0002.yaml
+    module_id: MOD-REVIEW-GATE-0001
+    module_slug: review_gate
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEMPLATE-TEMP-0003:
+    id: TEMPLATE-TEMP-0003
+    title: Codex Promotion Gate Template
+    type: TEMPLATE
+    status: active
+    authority: canonical
+    version: '0.1'
+    layer: blueprint
+    domain: temp
+    repo: ovis-blueprint
+    path: TEMPLATES/CODEX_PROMOTION_GATE.md
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0003.yaml
+    module_id: MOD-REVIEW-GATE-0001
+    module_slug: review_gate
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-BRANCH-0001:
+    id: TEST-BRANCH-0001
+    title: Test Branch Compaction Executor Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: tests/test_branch_compaction_executor.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-BRANCH-0001.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-BRANCH-0002:
+    id: TEST-BRANCH-0002
+    title: Test Branch Lifecycle Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: tests/test_branch_lifecycle.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-BRANCH-0002.yaml
+    module_id: MOD-BRANCH-CONTINUITY-0001
+    module_slug: branch_continuity
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-BRANCH-0003:
+    id: TEST-BRANCH-0003
+    title: Test Branch Runtime Compactor Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: tests/test_branch_runtime_compactor.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-BRANCH-0003.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-BRANCH-0004:
+    id: TEST-BRANCH-0004
+    title: Test Branch Store Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: branch
+    repo: ovis-runtime
+    path: tests/test_branch_store.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-BRANCH-0004.yaml
+    module_id: MOD-BRANCH-CONTINUITY-0001
+    module_slug: branch_continuity
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-COMPACTION-0001:
+    id: TEST-COMPACTION-0001
+    title: Test Compaction Commands Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: tests/test_compaction_commands.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-COMPACTION-0001.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-COMPACTION-0002:
+    id: TEST-COMPACTION-0002
+    title: Test Compaction Hooks Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: tests/test_compaction_hooks.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-COMPACTION-0002.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-COMPACTION-0003:
+    id: TEST-COMPACTION-0003
+    title: Test Compaction Triggers Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: tests/test_compaction_triggers.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-COMPACTION-0003.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-COMPACTION-0004:
+    id: TEST-COMPACTION-0004
+    title: Test Compaction Types Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: tests/test_compaction_types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-COMPACTION-0004.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-COMPACTION-0005:
+    id: TEST-COMPACTION-0005
+    title: Test Compaction Validation Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: compaction
+    repo: ovis-runtime
+    path: tests/test_compaction_validation.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-COMPACTION-0005.yaml
+    module_id: MOD-BRANCH-COMPACTION-0001
+    module_slug: branch_compaction
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0001:
+    id: TEST-EVENT-0001
+    title: Test Event Constants Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_constants.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0001.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0002:
+    id: TEST-EVENT-0002
+    title: Test Event Envelopes Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_envelopes.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0002.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0003:
+    id: TEST-EVENT-0003
+    title: Test Event Linkage Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_linkage.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0003.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0004:
+    id: TEST-EVENT-0004
+    title: Test Event Validation Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_validation.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0004.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0005:
+    id: TEST-EVENT-0005
+    title: Test Event Writer File Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_writer_file.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0005.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0006:
+    id: TEST-EVENT-0006
+    title: Test Event Writer Interface Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_writer_interface.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0006.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-EVENT-0007:
+    id: TEST-EVENT-0007
+    title: Test Event Writer Memory Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: event
+    repo: ovis-runtime
+    path: tests/test_event_writer_memory.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-EVENT-0007.yaml
+    module_id: MOD-EVENT-LOG-0001
+    module_slug: event_log
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-GATEWAY-0001:
+    id: TEST-GATEWAY-0001
+    title: Test Envelopes Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_envelopes.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0001.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GATEWAY-0002:
+    id: TEST-GATEWAY-0002
+    title: Test Executor Interface Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_executor_interface.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0002.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GATEWAY-0003:
+    id: TEST-GATEWAY-0003
+    title: Test Registry Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_registry.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0003.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GATEWAY-0004:
+    id: TEST-GATEWAY-0004
+    title: Test Schema Loader Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_schema_loader.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0004.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GATEWAY-0005:
+    id: TEST-GATEWAY-0005
+    title: Test Tool Dispatcher Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_tool_dispatcher.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0005.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GATEWAY-0006:
+    id: TEST-GATEWAY-0006
+    title: Test Tool Policy Hooks Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_tool_policy_hooks.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0006.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GATEWAY-0007:
+    id: TEST-GATEWAY-0007
+    title: Test Tool Registry Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gateway
+    repo: ovis-runtime
+    path: tests/test_tool_registry.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0007.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge
+  TEST-GOV-0001:
+    id: TEST-GOV-0001
+    title: Metadata Tooling Tests
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: tests/test_metadata_tools.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GOV-0001.yaml
+  TEST-GOV-0002:
+    id: TEST-GOV-0002
+    title: Metadata Scaffold Tests
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: gov
+    repo: ovis-runtime
+    path: tests/test_metadata_scaffold.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-GOV-0002.yaml
+  TEST-LOOP-0001:
+    id: TEST-LOOP-0001
+    title: Test Recursive Loop Runner Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: loop
+    repo: ovis-runtime
+    path: tests/test_recursive_loop_runner.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-LOOP-0001.yaml
+    module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+    module_slug: planning_execution_loop
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-OPERATOR-0001:
+    id: TEST-OPERATOR-0001
+    title: Test Operator Cli Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: operator
+    repo: ovis-runtime
+    path: tests/test_operator_cli.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-OPERATOR-0001.yaml
+    module_id: MOD-OPERATOR-SURFACE-0001
+    module_slug: operator_surface
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+    related_module_ids:
+    - MOD-TOOL-GATEWAY-0001
+  TEST-RUNTIME-0001:
+    id: TEST-RUNTIME-0001
+    title: Test Openai Responses Adapter Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_openai_responses_adapter.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0001.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0002:
+    id: TEST-RUNTIME-0002
+    title: Test Runtime Adapter Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_adapter.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0002.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0003:
+    id: TEST-RUNTIME-0003
+    title: Test Runtime Adapter Interface Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_adapter_interface.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0003.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0004:
+    id: TEST-RUNTIME-0004
+    title: Test Runtime Config Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_config.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0004.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0005:
+    id: TEST-RUNTIME-0005
+    title: Test Runtime Continuation Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_continuation.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0005.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0006:
+    id: TEST-RUNTIME-0006
+    title: Test Runtime Hooks Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_hooks.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0006.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0007:
+    id: TEST-RUNTIME-0007
+    title: Test Runtime Session Modes Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_session_modes.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0007.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-RUNTIME-0008:
+    id: TEST-RUNTIME-0008
+    title: Test Runtime Types Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: runtime
+    repo: ovis-runtime
+    path: tests/test_runtime_types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-RUNTIME-0008.yaml
+    module_id: MOD-RUNTIME-GATEWAY-0001
+    module_slug: runtime_gateway
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-STATE-0001:
+    id: TEST-STATE-0001
+    title: Test Ids And Enums Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: tests/test_ids_and_enums.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-STATE-0001.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-STATE-0002:
+    id: TEST-STATE-0002
+    title: Test Json Schema Export Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: tests/test_json_schema_export.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-STATE-0002.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-STATE-0003:
+    id: TEST-STATE-0003
+    title: Test Model Imports Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: tests/test_model_imports.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-STATE-0003.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-STATE-0004:
+    id: TEST-STATE-0004
+    title: Test Transition Matrix Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: tests/test_transition_matrix.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-STATE-0004.yaml
+    module_id: MOD-WORK-OBJECT-REGISTRY-0001
+    module_slug: work_object_registry
+    system_id: SYS-KERNEL-0001
+    system_slug: ovis_kernel
+  TEST-STATE-0005:
+    id: TEST-STATE-0005
+    title: Test Types Test
+    type: TEST
+    status: active
+    authority: operational
+    version: '0.1'
+    layer: runtime
+    domain: state
+    repo: ovis-runtime
+    path: tests/test_types.py
+    owner: Owen Vitae
+    created: '2026-03-21'
+    last_updated: '2026-03-21'
+    registry: ovis-blueprint/REGISTRIES/entries/TEST-STATE-0005.yaml
+    module_id: MOD-TOOL-GATEWAY-0001
+    module_slug: tool_gateway
+    system_id: SYS-INTEGRATION-0001
+    system_slug: integration_bridge

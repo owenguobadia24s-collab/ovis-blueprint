@@ -1,0 +1,14 @@
+id: MODULE-GOV-0008
+title: OVIS Metadata Scaffold Helper
+type: MODULE
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: gov
+repo: ovis-runtime
+path: src/ovis_metadata/scaffold.py
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0008.yaml

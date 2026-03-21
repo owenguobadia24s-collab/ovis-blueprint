@@ -1,0 +1,20 @@
+id: ADR-ARC-0010
+title: System Module Repo Registry Model
+type: ADR
+status: proposed
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-010_SYSTEM_MODULE_REPO_REGISTRY_MODEL.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0010.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+related_module_ids:
+- MOD-META-SCHEMA-POLICY-0001

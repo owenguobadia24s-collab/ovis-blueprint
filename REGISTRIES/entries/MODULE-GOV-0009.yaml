@@ -1,0 +1,14 @@
+id: MODULE-GOV-0009
+title: OVIS Metadata Normalization Scope
+type: MODULE
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: gov
+repo: ovis-runtime
+path: src/ovis_metadata/scope.py
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/MODULE-GOV-0009.yaml

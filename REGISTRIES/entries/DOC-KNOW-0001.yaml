@@ -1,0 +1,20 @@
+id: DOC-KNOW-0001
+title: OVIS Knowledge
+type: DOC
+status: active
+authority: derived
+version: '0.1'
+layer: knowledge
+domain: know
+repo: ovis-knowledge
+path: README.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/DOC-KNOW-0001.yaml
+module_id: MOD-SYSTEM-MEMORY-0001
+module_slug: system_memory
+system_id: SYS-RETRIEVAL-MEMORY-0001
+system_slug: retrieval_memory
+related_module_ids:
+- MOD-RETRIEVAL-LAYER-0001

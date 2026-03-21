@@ -1,0 +1,20 @@
+id: DOC-RUN-0003
+title: Schema Authoring Principle
+type: DOC
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: run
+repo: ovis-runtime
+path: docs/SCHEMA_AUTHORING_PRINCIPLE.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/DOC-RUN-0003.yaml
+module_id: MOD-WORK-OBJECT-REGISTRY-0001
+module_slug: work_object_registry
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
+related_module_ids:
+- MOD-META-SCHEMA-POLICY-0001

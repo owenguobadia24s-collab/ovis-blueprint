@@ -1,0 +1,20 @@
+id: ADR-ARC-0006
+title: Branch Compaction and Continuity
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-006_BRANCH_COMPACTION_AND_CONTINUITY.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0006.yaml
+module_id: MOD-BRANCH-COMPACTION-0001
+module_slug: branch_compaction
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
+related_module_ids:
+- MOD-BRANCH-CONTINUITY-0001

@@ -1,0 +1,18 @@
+id: REGISTRY-SYSTEM-0004
+title: OVIS Retrieval and Memory System
+type: REGISTRY
+status: planned
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: system
+repo: ovis-blueprint
+path: REGISTRIES/systems/SYS-RETRIEVAL-MEMORY-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-SYSTEM-0004.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system

@@ -1,0 +1,14 @@
+id: MODULE-OPERATOR-0002
+title: OVIS Operator CLI
+type: MODULE
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: operator
+repo: ovis-runtime
+path: src/ovis_operator/cli.py
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/MODULE-OPERATOR-0002.yaml

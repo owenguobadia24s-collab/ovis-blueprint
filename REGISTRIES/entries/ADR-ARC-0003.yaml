@@ -1,0 +1,14 @@
+id: ADR-ARC-0003
+title: Responses API as the Canonical OVIS Runtime
+type: ADR
+status: accepted
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: arc
+repo: ovis-blueprint
+path: ADR/ADR-003_RESPONSES_API_CANONICAL_RUNTIME.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/ADR-ARC-0003.yaml

@@ -1,0 +1,18 @@
+id: REGISTRY-REPO-0003
+title: ovis-knowledge
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: repo
+repo: ovis-blueprint
+path: REGISTRIES/repos/REPO-KNOWLEDGE-0001.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-REPO-0003.yaml
+module_id: MOD-META-REGISTRY-0001
+module_slug: meta_registry
+system_id: SYS-METADATA-0001
+system_slug: metadata_system

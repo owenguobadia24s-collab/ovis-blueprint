@@ -1,0 +1,14 @@
+id: TEST-GOV-0001
+title: Metadata Tooling Tests
+type: TEST
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: gov
+repo: ovis-runtime
+path: tests/test_metadata_tools.py
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/TEST-GOV-0001.yaml
