@@ -1,0 +1,126 @@
+id: SCHEMA-VAL-0001
+title: OVIS Metadata Schema
+type: SCHEMA
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: val
+repo: ovis-blueprint
+path: validators/OVIS_METADATA_SCHEMA.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/SCHEMA-VAL-0001.yaml
+module_id: MOD-META-SCHEMA-POLICY-0001
+module_slug: meta_schema_policy
+system_id: SYS-METADATA-0001
+system_slug: metadata_system
+related_module_ids:
+- MOD-META-HEADER-0001
+- MOD-META-REGISTRY-0001
+required_fields:
+- id
+- title
+- type
+- status
+- authority
+- version
+- layer
+- domain
+- repo
+- path
+- owner
+- created
+- last_updated
+- registry
+optional_fields:
+- module_id
+- module_slug
+- system_id
+- system_slug
+- related_module_ids
+- provisional_id_hint
+- supersedes
+- superseded_by
+artifact_id_pattern: ^[A-Z]+(?:-[A-Z0-9]+)+-\d{4}$
+structural_id_patterns:
+  system_id: ^SYS-(?:[A-Z0-9]+-)*[A-Z0-9]+-\d{4}$
+  module_id: ^MOD-(?:[A-Z0-9]+-)*[A-Z0-9]+-\d{4}$
+  repo_id: ^REPO-(?:[A-Z0-9]+-)*[A-Z0-9]+-\d{4}$
+containment_fields:
+  primary_module_field: module_id
+  related_module_field: related_module_ids
+  required_with_primary:
+  - module_slug
+  - system_id
+  - system_slug
+  related_modules:
+    duplicates_allowed: false
+    may_repeat_primary_module: false
+  enforcement:
+    workspace_backfill: deferred_until_file_to_module_mapping
+    structural_registry_lookup: staged
+allowed_types:
+- ADR
+- CJ
+- CONFIG
+- DOC
+- MANIFEST
+- MODULE
+- NOTE
+- PACKAGE
+- POLICY
+- REGISTRY
+- SCHEMA
+- SCRIPT
+- TEMPLATE
+- TEST
+allowed_status:
+- accepted
+- active
+- approved
+- archived
+- deprecated
+- draft
+- emerging
+- implemented
+- planned
+- proposed
+- stable
+- superseded
+allowed_authority:
+- canonical
+- derived
+- operational
+lifecycle_statuses:
+- planned
+- emerging
+- active
+- deprecated
+- superseded
+relation_authority:
+  primary:
+  - artifact_primary_module
+  - module_belongs_to_system
+  secondary:
+  - artifact_related_module
+  - system_spans_repo
+  - module_depends_on_module
+  - system_depends_on_system
+  - adr_governs_target
+  - cj_implements_target
+naming_validation:
+  forbidden_system_slugs:
+  - core
+  - misc
+  - general
+  forbidden_module_slugs:
+  - utils
+  - general
+document_sections:
+- Purpose
+- Scope
+- Content
+- References
+migration_phase: M2
