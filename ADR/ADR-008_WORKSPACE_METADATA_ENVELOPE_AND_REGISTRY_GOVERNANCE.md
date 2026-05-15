@@ -57,11 +57,15 @@ ADR-007 remains authoritative for runtime/state identity families such as `event
 
 ## Registry Model
 
-Canonical allocation authority for governed file IDs lives in `ovis-blueprint/REGISTRIES/allocators.yaml`. Canonical governed file records live in `ovis-blueprint/REGISTRIES/entries/*.yaml`. This allocator and file-entry authority is governed by ADR-008.
+The normalized end state governed by this ADR keeps allocation authority in `ovis-blueprint/REGISTRIES/allocators.yaml` and governed file records in `ovis-blueprint/REGISTRIES/entries/*.yaml`.
+
+During the post-Wave 1 interim state, `ovis-blueprint/REGISTRIES/allocators.yaml`, `ovis-blueprint/REGISTRIES/entries/*.yaml`, and `ovis-blueprint/REGISTRIES/OVIS_FILE_REGISTRY.yaml` are non-canonical working artifacts. They are useful reconciliation inputs, but they are not authoritative sources of truth until a controlled normalization pass regenerates and validates them together.
+
+After normalization completes, canonical containment truth lives in the normalized registry authority set on committed governed artifacts. `ovis-blueprint/REGISTRIES/id_registry.yaml` is a legacy artifact pending separate retirement cleanup.
 
 Artifacts may reference structural objects through containment metadata such as `module_id` and `system_id`, but ADR-008 does not define the structural object model for systems, modules, or repos. Dedicated structural registries under `ovis-blueprint/REGISTRIES/` are governed by ADR-010.
 
-Registry mutation authority for file-entry records and allocator state remains canonical in `ovis-blueprint`.
+Partial publication of file-entry or allocator state is not allowed while the registry layer remains in this interim non-canonical posture. Canonical registry authority resumes only after normalization regenerates allocator state, file-entry records, and the aggregate registry from artifact metadata and validates them together.
 
 ## Reconciler Rule
 
@@ -86,6 +90,8 @@ Wrapped `OVIS:` and legacy flat `ov_*` metadata are non-canonical. Migration is 
 - Metadata schema authority, registry authority, and allocation constraints for workspace artifacts now anchor explicitly under ADR-008.
 - Structural containment is metadata-governed and cannot be inferred from artifact IDs.
 - New structural registries for systems, modules, repos, and relations are referenced by artifact containment but governed separately.
+- Post-Wave 1 artifact metadata is the temporary canonical source of truth for containment until registry normalization is completed.
+- `REGISTRIES/allocators.yaml`, `REGISTRIES/entries/*.yaml`, and `REGISTRIES/OVIS_FILE_REGISTRY.yaml` must be treated as non-canonical working artifacts during the interim period.
 - Future structural mutation requires the supporting ADR package for containment separation, registry modeling, taxonomy governance, and ecosystem boundaries.
 
 ## Module Seal

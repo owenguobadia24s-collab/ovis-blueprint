@@ -44,6 +44,12 @@ This construction job covers blueprint governance artifacts, runtime tooling, co
 
 The rollout must not guess canonical IDs from uncertain allocator state. Any non-deterministic conflict fails closed for human review.
 
+Post-Wave 1, artifact-level metadata on committed governed artifacts is the temporary canonical authority for containment truth. `REGISTRIES/allocators.yaml`, `REGISTRIES/entries/**`, and `REGISTRIES/OVIS_FILE_REGISTRY.yaml` are held as non-canonical working artifacts until a controlled normalization pass regenerates and validates them together.
+
+The registry-resolution path completed as hybrid staged normalization: registry working state was reconciled against artifact metadata, then allocator state, entry records, and aggregate registry were regenerated together in one controlled pass. `REGISTRIES/id_registry.yaml` is now a separate legacy-retirement cleanup item rather than part of canonical registry authority.
+
+CI metadata enforcement remains held until the normalized registry layer becomes canonical. It must not be enabled against the current interim registry working state.
+
 # References
 
 - POLICIES/OVIS_METADATA_STANDARD.md

@@ -1,44 +1,54 @@
 ---
-OVIS:
-  id: OVIS-TASK-SYS-0001
-  title: Blueprint Repository Scaffold
-  type: TASK
-  status: READY
-  version: v0.2
-  domain: SYS
-  repo: ovis-blueprint
-  created: 2026-03-12
-  last_updated: 2026-03-12
-  author: human
-  contributors: []
-  tags:
-    - phase-0
+id: CJ-SYS-0001
+title: Blueprint Repository Scaffold
+type: CJ
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: sys
+repo: ovis-blueprint
+path: TASKS/OVIS-TASK-SYS-0001_BLUEPRINT_REPO_SCAFFOLD.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/CJ-SYS-0001.yaml
 ---
 
-# OVIS-TASK-SYS-0001
+# Purpose
+
+Specify the construction job named Blueprint Repository Scaffold.
+
+# Scope
+
+This file governs or documents Blueprint Repository Scaffold within the ovis-blueprint repository.
+
+# Content
+
+## OVIS-TASK-SYS-0001
 Blueprint Repository Scaffold
 
-## Purpose
+### Purpose
 
 Bootstrap the `ovis-blueprint` repository by creating the initial structural, governance, and metadata framework required for OVIS system development.
 
 This task establishes the constitutional design environment for OVIS and installs the core governance primitives required for future tasks.
 
-## Change Type
+### Change Type
 
 STRUCTURAL
 
-## Target Repository
+### Target Repository
 
 ovis-blueprint
 
-## Problem Statement
+### Problem Statement
 
 OVIS requires a controlled design environment where system architecture, governance rules, task definitions, and change records are defined before implementation.
 
 Without a blueprint repository scaffold, system evolution cannot be governed or traced.
 
-## Objective
+### Objective
 
 Create the foundational directory structure and baseline files for the `ovis-blueprint` repository, including:
 
@@ -49,7 +59,7 @@ Create the foundational directory structure and baseline files for the `ovis-blu
 - ID registry
 - validator workspace
 
-## Allowed Inputs
+### Allowed Inputs
 
 Codex may reference:
 
@@ -58,7 +68,7 @@ Codex may reference:
 - OVIS Task Construction Protocol v0.1
 - repository ecosystem definition
 
-## Allowed Outputs
+### Allowed Outputs
 
 Create the following directory structure:
 
@@ -88,7 +98,9 @@ CODEX_REVIEW_CHECKLIST.md
 CODEX_PROMOTION_GATE.md
 
 REGISTRIES/
-id_registry.yaml
+allocators.yaml
+entries/
+OVIS_FILE_REGISTRY.yaml
 
 PHASES/
 PHASE_0_RESEARCH_AND_BLUEPRINT.md
@@ -98,7 +110,7 @@ README.md
 
 All files must include the OVIS YAML document envelope.
 
-## Forbidden Actions
+### Forbidden Actions
 
 Codex must not:
 
@@ -108,42 +120,46 @@ Codex must not:
 - assign canonical status to any document
 - alter governance rules beyond scaffolding
 
-## Verification Requirements
+### Verification Requirements
 
 Codex must confirm:
 
 1. All required directories exist.
 2. All created files contain valid OVIS YAML frontmatter.
-3. `id_registry.yaml` follows the defined schema.
+3. `allocators.yaml`, `entries/**`, and `OVIS_FILE_REGISTRY.yaml` follow the defined canonical registry schemas.
 4. No unauthorized directories were created.
 5. All IDs conform to OVIS ID format.
 
-## Return Report Requirements
+### Return Report Requirements
 
 Codex must provide:
 
-### Execution Summary
+#### Execution Summary
 Short description of work performed.
 
-### Files Created
+#### Files Created
 List of files created.
 
-### Directories Created
+#### Directories Created
 List of directories created.
 
-### Verification Results
+#### Verification Results
 Results of required checks.
 
-### Assumptions
+#### Assumptions
 Any assumptions made during execution.
 
-### Status Recommendation
+#### Status Recommendation
 Ready for review / Blocked / Needs revision
 
-## Review Outcome
+### Review Outcome
 
 To be completed by reviewer.
 
-## Linked Change Record
+### Linked Change Record
 
 To be created after task review.
+
+# References
+
+- REGISTRIES/allocators.yaml

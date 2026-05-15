@@ -58,6 +58,14 @@ Relation-registry mirroring for `related_module_ids` is not required in the cano
 
 Artifact IDs follow `TYPE-DOMAIN-NNNN` and identify the artifact only. Module and system ownership must never be encoded into artifact IDs. ADR-008 is the mandatory authority for this separation, while ADR-007 remains authoritative for runtime/state identity families.
 
+## Registry Authority Interim State
+
+Canonical containment truth now lives in the normalized registry system on committed governed artifacts.
+
+`REGISTRIES/allocators.yaml`, `REGISTRIES/entries/**`, and `REGISTRIES/OVIS_FILE_REGISTRY.yaml` are non-canonical working artifacts during this interim state. They are useful reconciliation inputs, but they are not authoritative sources of truth until a controlled normalization pass regenerates and validates them together.
+
+`REGISTRIES/id_registry.yaml` is a legacy artifact pending separate retirement cleanup. Canonical registry authority now resides in allocator state, entry records, and the aggregate registry as normalized against artifact metadata.
+
 ## Insertion Modes
 
 Markdown and text files use YAML frontmatter. Python and other supported source files use comment-prefixed headers. Strict files use sidecars named `<filename>.ovis.yaml`.
@@ -88,7 +96,7 @@ System and module names must describe responsibility rather than act as catch-al
 
 ## Ignore Policy
 
-Generated files, vendored content, caches, compiled registry aggregates, and canonical registry entry payloads are excluded from file-level metadata validation.
+Generated files, vendored content, caches, allocator working state, registry entry working state, legacy registry state, and compiled registry aggregates are excluded from file-level metadata validation.
 
 # References
 
