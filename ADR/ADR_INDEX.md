@@ -44,7 +44,7 @@ This index summarizes the authoritative ADR set available in `ovis-blueprint/ADR
 | ADR-009 | Artifact Identity and Containment Separation | Proposed | ADR-007, ADR-008 | Separates artifact identity from module/system containment and fixes primary versus related module semantics. |
 | ADR-010 | System Module Repo Registry Model | Proposed | ADR-008, ADR-009 | Defines systems, modules, repos, and relation registries as first-class governed objects. |
 | ADR-011 | Module Introduction and Taxonomy Governance | Proposed | ADR-009, ADR-010 | Defines when modules may be created, split, merged, deprecated, or superseded. |
-| ADR-012 | OVIS OVC Ecosystem Boundary | Proposed | ADR-008, ADR-010 | Defers OVC structure and fixes the current OVIS-only structural scope. |
+| ADR-012 | OVIS OVC Ecosystem Boundary | Accepted | ADR-008, ADR-010 | Defines the OVC/OVIS separation boundary and read-only inspection rules for OVC. |
 
 
 # References
