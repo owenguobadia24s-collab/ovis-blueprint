@@ -11,7 +11,7 @@ repo: ovis-blueprint
 path: TEMPLATES/CODEX_TASK_CONTRACT.md
 owner: Owen Vitae
 created: '2026-03-21'
-last_updated: '2026-03-21'
+last_updated: '2026-05-20'
 registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0001.yaml
 module_id: MOD-PLANNING-EXECUTION-LOOP-0001
 module_slug: planning_execution_loop
@@ -33,15 +33,41 @@ This file governs or documents Codex Task Contract Template within the ovis-blue
 
 ## CODEX Task Contract Template
 
-Scaffold placeholder template. Use this structure when a formal task contract specification is approved.
+Use this template to define a bounded Codex task contract suitable for safe execution against Git repos.
 
-### Contract Placeholder
+This template is aligned with `TEMPLATES/NOTION_CODEX_JOB_CONTRACT.md` and the cockpit authority rules in
+`POLICIES/NOTION_COMMAND_COCKPIT_PROTOCOL.md`.
 
-- Task ID: TBD
-- Objective: TBD
-- Constraints: TBD
-- Required Outputs: TBD
+### Contract Fields (Minimum)
+
+- Task ID: `TBD`
+- Job kind: `Plan|Execute`
+- Objective: `TBD`
+- Allowed paths (allowlist): `TBD`
+- Forbidden actions (denylist): `TBD`
+- Validation commands: `TBD`
+- Required return format:
+  - summary
+  - files changed/created
+  - checks run + results
+  - assumptions
+  - open issues
+
+### Contract Template (Fill-In)
+
+- Task ID:
+- Job kind:
+- Repo:
+- Objective:
+- Inputs:
+- Allowed outputs:
+- Allowed paths:
+- Forbidden actions:
+- Validation commands:
+- Required return format:
 
 # References
 
 - REGISTRIES/allocators.yaml
+  - `POLICIES/NOTION_COMMAND_COCKPIT_PROTOCOL.md`
+  - `TEMPLATES/NOTION_CODEX_JOB_CONTRACT.md`

@@ -11,7 +11,7 @@ repo: ovis-blueprint
 path: TEMPLATES/CODEX_REVIEW_CHECKLIST.md
 owner: Owen Vitae
 created: '2026-03-21'
-last_updated: '2026-03-21'
+last_updated: '2026-05-20'
 registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0002.yaml
 module_id: MOD-REVIEW-GATE-0001
 module_slug: review_gate
@@ -31,15 +31,35 @@ This file governs or documents Codex Review Checklist Template within the ovis-b
 
 ## CODEX Review Checklist Template
 
-Scaffold placeholder template. Review criteria are intentionally not defined in this file.
+Use this checklist when reviewing Codex outputs (plan or execution) for scope safety, policy compliance, and verification completeness.
 
-### Checklist Placeholder
+This template is aligned with `POLICIES/NOTION_COMMAND_COCKPIT_PROTOCOL.md` and
+`TEMPLATES/NOTION_CODEX_JOB_CONTRACT.md`.
 
-- Scope Validation: TBD
-- Structure Validation: TBD
-- Metadata Validation: TBD
-- Approval Status: TBD
+### Checklist (Minimum)
+
+- Scope validation
+  - Output matches the stated objective.
+  - No scope expansion beyond the contract.
+  - All changes stay within the allowlisted paths.
+- Forbidden actions
+  - No edits to `REGISTRIES/**`.
+  - No direct Notion writes.
+  - No work performed in `ovc-*` repos.
+- Verification evidence
+  - Validation commands were run (or an explicit, justified skip was recorded).
+  - Results are reported clearly.
+- Output completeness
+  - Summary is present.
+  - Files changed/created are listed by path.
+  - Checks run are listed with results.
+  - Assumptions and open issues are captured.
+- Review/approval status
+  - If this is a Plan Job: approval decision is recorded before issuing an Execute Job.
+  - If this is an Execute Job: approval decision is recorded before dispatch.
 
 # References
 
 - REGISTRIES/allocators.yaml
+  - `POLICIES/NOTION_COMMAND_COCKPIT_PROTOCOL.md`
+  - `TEMPLATES/NOTION_CODEX_JOB_CONTRACT.md`
