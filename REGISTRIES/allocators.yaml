@@ -53,7 +53,7 @@ families:
     next_number: 2
     retired_ids: []
   DOC-WF:
-    next_number: 2
+    next_number: 3
     retired_ids: []
   MANIFEST-GOV:
     next_number: 4

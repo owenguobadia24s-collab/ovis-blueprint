@@ -1,0 +1,18 @@
+id: DOC-WF-0002
+title: CJ Continuity Log
+type: DOC
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: wf
+repo: ovis-blueprint
+path: CHANGE_LOG/CJ_CONTINUITY_LOG.md
+owner: Owen Vitae
+created: '2026-06-16'
+last_updated: '2026-06-16'
+registry: ovis-blueprint/REGISTRIES/entries/DOC-WF-0002.yaml
+module_id: MOD-PLANNING-EXECUTION-LOOP-0001
+module_slug: planning_execution_loop
+system_id: SYS-KERNEL-0001
+system_slug: ovis_kernel
