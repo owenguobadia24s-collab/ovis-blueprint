@@ -12,7 +12,7 @@ path: POLICIES/NOTION_COMMAND_COCKPIT_PROTOCOL.md
 owner: Owen Vitae
 created: '2026-05-20'
 last_updated: '2026-05-20'
-registry: ovis-blueprint/REGISTRIES/entries/
+registry: ovis-blueprint/REGISTRIES/entries/POLICY-GOV-0003.yaml
 module_id: MOD-PLANNING-EXECUTION-LOOP-0001
 module_slug: planning_execution_loop
 system_id: SYS-KERNEL-0001

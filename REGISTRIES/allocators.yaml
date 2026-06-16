@@ -17,7 +17,7 @@ families:
     next_number: 13
     retired_ids: []
   CJ-GOV:
-    next_number: 2
+    next_number: 3
     retired_ids: []
   CJ-IA:
     next_number: 2
@@ -77,7 +77,7 @@ families:
     next_number: 20
     retired_ids: []
   POLICY-GOV:
-    next_number: 3
+    next_number: 4
     retired_ids: []
   REGISTRY-MODULE:
     next_number: 18
@@ -95,7 +95,7 @@ families:
     next_number: 2
     retired_ids: []
   TEMPLATE-TEMP:
-    next_number: 4
+    next_number: 5
     retired_ids: []
   TEST-BRANCH:
     next_number: 5
