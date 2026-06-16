@@ -68,7 +68,7 @@ families:
     next_number: 12
     retired_ids: []
   MODULE-GATEWAY:
-    next_number: 10
+    next_number: 11
     retired_ids: []
   MODULE-GOV:
     next_number: 14
@@ -125,7 +125,7 @@ families:
     next_number: 8
     retired_ids: []
   TEST-GATEWAY:
-    next_number: 8
+    next_number: 9
     retired_ids: []
   TEST-GOV:
     next_number: 3

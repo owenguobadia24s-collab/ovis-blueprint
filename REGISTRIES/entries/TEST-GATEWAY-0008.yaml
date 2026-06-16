@@ -1,0 +1,18 @@
+id: TEST-GATEWAY-0008
+title: Test Bridge Dry Run Test
+type: TEST
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: gateway
+repo: ovis-runtime
+path: tests/test_bridge_dry_run.py
+owner: Owen Vitae
+created: '2026-06-16'
+last_updated: '2026-06-16'
+registry: ovis-blueprint/REGISTRIES/entries/TEST-GATEWAY-0008.yaml
+module_id: MOD-TOOL-GATEWAY-0001
+module_slug: tool_gateway
+system_id: SYS-INTEGRATION-0001
+system_slug: integration_bridge
