@@ -1,0 +1,14 @@
+id: DOC-RUN-0002
+title: Post CJ12 System State
+type: DOC
+status: active
+authority: operational
+version: '0.1'
+layer: runtime
+domain: run
+repo: ovis-runtime
+path: docs/POST_CJ12_SYSTEM_STATE.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/DOC-RUN-0002.yaml
