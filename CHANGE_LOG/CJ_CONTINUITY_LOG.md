@@ -4,3 +4,4 @@
 | 2026-06-16 | CJ-REG-RUN-0001 | EXECUTE | ovis-runtime/ovc + ovis-blueprint/main | Repair runtime metadata registry gaps | CLOSE | validation:pass |
 | 2026-06-16 | CJ-DOC-RUN-0001 | DOC-UPDATE | ovis-runtime/ovc + ovis-blueprint/main | Reconcile runtime docs with implemented state | CLOSE | validation:pass |
 | 2026-06-16 | CJ-GOV-AI-0001 | GOVERNANCE | ovis-blueprint/main | Formalize AI write permissions policy | CLOSE | validation:pass |
+| 2026-06-16 | CJ-POLICY-RUN-0001 | IMPLEMENT | ovis-runtime/ovc + ovis-blueprint/main | Implement first runtime AI write-policy hook | CLOSE | commit:5b79660 |
