@@ -1,0 +1,14 @@
+id: REGISTRY-GOV-0001
+title: OVIS Metadata Allocators
+type: REGISTRY
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: gov
+repo: ovis-blueprint
+path: REGISTRIES/allocators.yaml
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/REGISTRY-GOV-0001.yaml

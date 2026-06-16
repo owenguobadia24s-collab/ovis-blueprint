@@ -1,0 +1,18 @@
+id: TEMPLATE-OVC-0003
+title: OVC Canonical Candidates Template
+type: TEMPLATE
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: return
+repo: ovis-blueprint
+path: TEMPLATES/OVC_INSPECTION/OVC_CANONICAL_CANDIDATES.md
+owner: Owen Vitae
+created: '2026-05-17'
+last_updated: '2026-05-17'
+registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-OVC-0003.yaml
+module_id: MOD-BRIDGE-DISPATCH-0001
+module_slug: bridge_dispatch
+system_id: SYS-INTEGRATION-0001
+system_slug: integration_bridge

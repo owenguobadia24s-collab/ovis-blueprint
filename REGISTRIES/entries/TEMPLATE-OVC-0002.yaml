@@ -1,0 +1,18 @@
+id: TEMPLATE-OVC-0002
+title: OVC Artifact Classification Ledger Template
+type: TEMPLATE
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: return
+repo: ovis-blueprint
+path: TEMPLATES/OVC_INSPECTION/OVC_ARTIFACT_CLASSIFICATION_LEDGER.md
+owner: Owen Vitae
+created: '2026-05-17'
+last_updated: '2026-05-17'
+registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-OVC-0002.yaml
+module_id: MOD-BRIDGE-DISPATCH-0001
+module_slug: bridge_dispatch
+system_id: SYS-INTEGRATION-0001
+system_slug: integration_bridge

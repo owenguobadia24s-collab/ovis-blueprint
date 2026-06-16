@@ -1,0 +1,14 @@
+id: DOC-SYS-0001
+title: OVIS Blueprint Repository
+type: DOC
+status: active
+authority: canonical
+version: '0.1'
+layer: blueprint
+domain: sys
+repo: ovis-blueprint
+path: README.md
+owner: Owen Vitae
+created: '2026-03-21'
+last_updated: '2026-03-21'
+registry: ovis-blueprint/REGISTRIES/entries/DOC-SYS-0001.yaml

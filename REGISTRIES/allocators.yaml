@@ -22,11 +22,20 @@ families:
   CJ-IA:
     next_number: 2
     retired_ids: []
+  CJ-RETURN:
+    next_number: 5
+    retired_ids: []
   CJ-STRUCTURE:
     next_number: 6
     retired_ids: []
+  CJ-SYS:
+    next_number: 2
+    retired_ids: []
   CONFIG-RUN:
     next_number: 3
+    retired_ids: []
+  DOC-ARC:
+    next_number: 2
     retired_ids: []
   DOC-KNOW:
     next_number: 2
@@ -36,6 +45,9 @@ families:
     retired_ids: []
   DOC-STRUCTURE:
     next_number: 5
+    retired_ids: []
+  DOC-SYS:
+    next_number: 2
     retired_ids: []
   DOC-VAL:
     next_number: 2
@@ -79,6 +91,9 @@ families:
   POLICY-GOV:
     next_number: 4
     retired_ids: []
+  REGISTRY-GOV:
+    next_number: 2
+    retired_ids: []
   REGISTRY-MODULE:
     next_number: 18
     retired_ids: []
@@ -93,6 +108,9 @@ families:
     retired_ids: []
   SCHEMA-VAL:
     next_number: 2
+    retired_ids: []
+  TEMPLATE-OVC:
+    next_number: 6
     retired_ids: []
   TEMPLATE-TEMP:
     next_number: 5
