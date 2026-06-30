@@ -28,26 +28,14 @@ families:
   CJ-STRUCTURE:
     next_number: 6
     retired_ids: []
-  CJ-SYS:
-    next_number: 2
-    retired_ids: []
   CONFIG-RUN:
     next_number: 3
-    retired_ids: []
-  DOC-ARC:
-    next_number: 2
-    retired_ids: []
-  DOC-KNOW:
-    next_number: 2
     retired_ids: []
   DOC-RUN:
     next_number: 4
     retired_ids: []
   DOC-STRUCTURE:
     next_number: 5
-    retired_ids: []
-  DOC-SYS:
-    next_number: 2
     retired_ids: []
   DOC-VAL:
     next_number: 2
@@ -56,7 +44,7 @@ families:
     next_number: 3
     retired_ids: []
   MANIFEST-GOV:
-    next_number: 4
+    next_number: 3
     retired_ids: []
   MODULE-BRANCH:
     next_number: 5
@@ -82,6 +70,9 @@ families:
   MODULE-OPERATOR:
     next_number: 5
     retired_ids: []
+  MODULE-RETRIEVAL:
+    next_number: 6
+    retired_ids: []
   MODULE-RUNTIME:
     next_number: 10
     retired_ids: []
@@ -90,9 +81,6 @@ families:
     retired_ids: []
   POLICY-GOV:
     next_number: 4
-    retired_ids: []
-  REGISTRY-GOV:
-    next_number: 2
     retired_ids: []
   REGISTRY-MODULE:
     next_number: 18
@@ -134,6 +122,9 @@ families:
     next_number: 2
     retired_ids: []
   TEST-OPERATOR:
+    next_number: 2
+    retired_ids: []
+  TEST-RETRIEVAL:
     next_number: 2
     retired_ids: []
   TEST-RUNTIME:

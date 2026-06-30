@@ -10,7 +10,7 @@ repo: ovis-blueprint
 path: TEMPLATES/CODEX_TASK_CONTRACT.md
 owner: Owen Vitae
 created: '2026-03-21'
-last_updated: '2026-03-21'
+last_updated: '2026-05-20'
 registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0001.yaml
 module_id: MOD-PLANNING-EXECUTION-LOOP-0001
 module_slug: planning_execution_loop

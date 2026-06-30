@@ -10,7 +10,7 @@ repo: ovis-blueprint
 path: TEMPLATES/CODEX_REVIEW_CHECKLIST.md
 owner: Owen Vitae
 created: '2026-03-21'
-last_updated: '2026-03-21'
+last_updated: '2026-05-20'
 registry: ovis-blueprint/REGISTRIES/entries/TEMPLATE-TEMP-0002.yaml
 module_id: MOD-REVIEW-GATE-0001
 module_slug: review_gate
